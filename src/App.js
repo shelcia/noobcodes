@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import HomePage from "./components/mainpage/HomePage";
+import "./styles/style.css";
 
 const App = () => {
   return (
