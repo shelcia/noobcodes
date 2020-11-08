@@ -1,3 +1,34 @@
+$white: rgba(255, 255, 255, 0.87);
+$purewhite: #fff;
+$bg: #282c34;
+$black: #343a40;
 * {
   font-family: "Roboto", sans-serif;
+}
+
+.bg-dark {
+  background-color: $bg !important;
+  a {
+    font-size: 1.1rem;
+    color: $white;
+    display: block;
+    &:hover {
+      transition: all 0.2s ease-in;
+      background-color: $black;
+      color: $white;
+    }
+    &:active {
+      background-color: $black;
+      color: $purewhite;
+    }
+  }
+  .nav-pills .nav-link.active,
+  .nav-pills .show > .nav-link {
+    background-color: $black;
+    color: $purewhite;
+  }
+}
+
+.text-light {
+  color: $white !important;
 }

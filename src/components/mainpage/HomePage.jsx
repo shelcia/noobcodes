@@ -13,8 +13,8 @@ const HomePage = () => {
         <nav
           className={
             darkTheme
-              ? "navbar navbar-expand-sm bg-dark shadow"
-              : "navbar navbar-expand-sm bg-light shadow"
+              ? "navbar navbar-expand-sm bg-dark navbar-dark shadow"
+              : "navbar navbar-expand-sm bg-light navbar-light shadow"
           }
         >
           <a className="navbar-brand" href="/">

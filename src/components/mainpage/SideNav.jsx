@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const SideNav = () => {
   return (
@@ -9,50 +10,54 @@ const SideNav = () => {
         role="tablist"
         aria-orientation="vertical"
       >
-        <a
+        <NavLink
+          exact
           className="nav-link active"
           id="v-pills-home-tab"
           data-toggle="pill"
-          href="#v-pills-home"
+          to="/"
           role="tab"
           aria-controls="v-pills-home"
           aria-selected="true"
         >
           Home
-        </a>
-        <a
+        </NavLink>
+        <NavLink
+          exact
           className="nav-link"
           id="v-pills-profile-tab"
           data-toggle="pill"
-          href="#v-pills-profile"
+          to="/arrayprograms"
           role="tab"
           aria-controls="v-pills-profile"
           aria-selected="false"
         >
-          Profile
-        </a>
-        <a
+          Array
+        </NavLink>
+        <NavLink
+          exact
           className="nav-link"
           id="v-pills-messages-tab"
           data-toggle="pill"
-          href="#v-pills-messages"
+          to="/linkedlists"
           role="tab"
           aria-controls="v-pills-messages"
           aria-selected="false"
         >
-          Messages
-        </a>
-        <a
+          Linked Lists
+        </NavLink>
+        <NavLink
+          exact
           className="nav-link"
           id="v-pills-settings-tab"
           data-toggle="pill"
-          href="#v-pills-settings"
+          to="/basic"
           role="tab"
           aria-controls="v-pills-settings"
           aria-selected="false"
         >
-          Settings
-        </a>
+          Basic
+        </NavLink>
       </div>
     </React.Fragment>
   );

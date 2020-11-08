@@ -1,4 +1,36 @@
 * {
   font-family: "Roboto", sans-serif;
 }
+
+.bg-dark {
+  background-color: #282c34 !important;
+}
+
+.bg-dark a {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.87);
+  display: block;
+}
+
+.bg-dark a:hover {
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  background-color: #343a40;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+.bg-dark a:active {
+  background-color: #343a40;
+  color: #fff;
+}
+
+.bg-dark .nav-pills .nav-link.active,
+.bg-dark .nav-pills .show > .nav-link {
+  background-color: #343a40;
+  color: #fff;
+}
+
+.text-light {
+  color: rgba(255, 255, 255, 0.87) !important;
+}
 /*# sourceMappingURL=style.css.map */
