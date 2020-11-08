@@ -54,4 +54,33 @@ code {
 .text-light {
   color: rgba(255, 255, 255, 0.87) !important;
 }
+
+.bg-light code {
+  letter-spacing: 1px;
+}
+
+.bg-light a {
+  font-size: 1.1rem;
+  color: #282c34;
+  display: block;
+}
+
+.bg-light a:hover {
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  background-color: #e4e4e4;
+  color: #282c34;
+}
+
+.bg-light a:active {
+  background-color: #e4e4e4;
+  color: #282c34;
+}
+
+.bg-light .nav-pills .nav-link.active,
+.bg-light .nav-pills .show > .nav-link {
+  background-color: #e4e4e4;
+  color: #282c34;
+  border-radius: 0px;
+}
 /*# sourceMappingURL=style.css.map */

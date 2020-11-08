@@ -1,11 +1,15 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-const SideNav = () => {
+const SideNav = ({ darkTheme }) => {
   return (
     <React.Fragment>
       <div
-        className="nav flex-column nav-pills shadow"
+        className={
+          darkTheme
+            ? "nav flex-column nav-pills shadow"
+            : "nav flex-column nav-pills shadow-sm"
+        }
         id="v-pills-tab"
         role="tablist"
         aria-orientation="vertical"

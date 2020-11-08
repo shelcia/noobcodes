@@ -3,6 +3,7 @@ $purewhite: #fff;
 $bg: #282c34;
 $black: #343a40;
 $whiteBorder: rgba(255, 255, 255, 0.1);
+$whitehover: rgb(228, 228, 228);
 * {
   font-family: "Roboto", sans-serif;
 }
@@ -53,4 +54,31 @@ code {
 
 .text-light {
   color: $white !important;
+}
+
+.bg-light {
+  code {
+    letter-spacing: 1px;
+  }
+
+  a {
+    font-size: 1.1rem;
+    color: $bg;
+    display: block;
+    &:hover {
+      transition: all 0.2s ease-in;
+      background-color: $whitehover;
+      color: $bg;
+    }
+    &:active {
+      background-color: $whitehover;
+      color: $bg;
+    }
+  }
+  .nav-pills .nav-link.active,
+  .nav-pills .show > .nav-link {
+    background-color: $whitehover;
+    color: $bg;
+    border-radius: 0px;
+  }
 }

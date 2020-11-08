@@ -1,5 +1,5 @@
 import React from "react";
-import { CopyBlock, dracula } from "react-code-blocks";
+import { CopyBlock, dracula, github } from "react-code-blocks";
 import SideNav from "../mainpage/SideNav";
 
 const MinMax = ({ darkTheme }) => {
@@ -30,12 +30,18 @@ const MinMax = ({ darkTheme }) => {
             <SideNav />
           </div>
           <div className="col-sm-9 mt-4">
-            <div className="container shadow p-0 w-75">
+            <div
+              className={
+                darkTheme
+                  ? "container shadow p-0 w-75"
+                  : "container shadow-sm p-0 w-75"
+              }
+            >
               <CopyBlock
                 language={`python`}
                 text={languageDemo}
                 showLineNumbers={true}
-                theme={dracula}
+                theme={darkTheme ? dracula : github}
                 wrapLines={true}
                 codeBlock
               />
