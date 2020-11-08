@@ -1,45 +1,25 @@
-import React, { useState } from "react";
+import React from "react";
 import SideNav from "./SideNav";
 
-const HomePage = () => {
-  const [darkTheme, setDarkTheme] = useState(true);
-
+const HomePage = ({ darkTheme }) => {
   return (
     <React.Fragment>
       <div
         className={darkTheme ? "bg-dark text-light" : "bg-light text-dark"}
-        style={{ height: "100vh" }}
+        style={{ height: "90vh" }}
       >
-        <nav
-          className={
-            darkTheme
-              ? "navbar navbar-expand-sm bg-dark navbar-dark shadow"
-              : "navbar navbar-expand-sm bg-light navbar-light shadow"
-          }
-        >
-          <a className="navbar-brand" href="/">
-            Noob Codes
-          </a>
-          <form>
-            <div className="custom-control custom-switch">
-              <input
-                type="checkbox"
-                className="custom-control-input"
-                onChange={() => setDarkTheme(!darkTheme)}
-                id="switch1"
-              />
-              <label className="custom-control-label" htmlFor="switch1">
-                Dark Theme
-              </label>
-            </div>
-          </form>
-        </nav>
-        <div className="row mt-4">
-          <div className="col-sm-3">
+        <div className="row">
+          <div className="col-sm-3 mt-4">
             <SideNav />
           </div>
-          <div className="col-sm-9">
+          <div className="col-sm-9 mt-4">
             <h1>Hello People !</h1>
+            <hr />
+            <p>
+              No great stuff yet !!. It's hard to leearn DS and Algos. So i
+              thought i will create a website which i love to do and also
+              learning DS and algo coz this is gonne be ds and alga website
+            </p>
           </div>
         </div>
       </div>

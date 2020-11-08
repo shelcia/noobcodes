@@ -2,8 +2,29 @@
   font-family: "Roboto", sans-serif;
 }
 
+code {
+  font-family: "Menlo", monospace !important;
+}
+
 .bg-dark {
   background-color: #282c34 !important;
+}
+
+.bg-dark .react-syntax-highlighter-line-number {
+  color: rgba(255, 255, 255, 0.87);
+}
+
+.bg-dark code {
+  color: rgba(255, 255, 255, 0.87) !important;
+  letter-spacing: 1px;
+}
+
+.bg-dark .border-right {
+  border-right: 0.1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.bg-dark hr {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .bg-dark a {

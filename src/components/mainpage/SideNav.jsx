@@ -5,7 +5,7 @@ const SideNav = () => {
   return (
     <React.Fragment>
       <div
-        className="nav flex-column nav-pills border-right"
+        className="nav flex-column nav-pills shadow"
         id="v-pills-tab"
         role="tablist"
         aria-orientation="vertical"

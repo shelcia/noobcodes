@@ -2,12 +2,34 @@ $white: rgba(255, 255, 255, 0.87);
 $purewhite: #fff;
 $bg: #282c34;
 $black: #343a40;
+$whiteBorder: rgba(255, 255, 255, 0.1);
 * {
   font-family: "Roboto", sans-serif;
 }
 
+code {
+  font-family: "Menlo", monospace !important;
+}
+
 .bg-dark {
   background-color: $bg !important;
+
+  .react-syntax-highlighter-line-number {
+    color: $white;
+  }
+
+  code {
+    color: $white !important;
+    letter-spacing: 1px;
+  }
+
+  .border-right {
+    border-right: 0.1px solid $whiteBorder !important;
+  }
+  hr {
+    border-top: 1px solid $whiteBorder;
+  }
+
   a {
     font-size: 1.1rem;
     color: $white;
