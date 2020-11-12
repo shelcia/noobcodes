@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Admin from "./components/adminpage/admin";
 import MinMax from "./components/array/MinMax";
 import { ThemeProvider } from "./components/context/ThemeContext";
 import Error404 from "./components/Error404";
@@ -16,6 +17,7 @@ const App = () => {
           <Switch>
             <Route path="/" exact component={HomePage} />
             <Route path="/arrayprograms" exact component={MinMax} />
+            <Route path="/admin/rombakushithaan" exact component={Admin} />
             <Route component={Error404} />
           </Switch>
         </BrowserRouter>
