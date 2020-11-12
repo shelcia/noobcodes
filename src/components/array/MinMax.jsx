@@ -16,8 +16,6 @@ const MinMax = ({ darkTheme }) => {
       elif(min > Array[i]):
           min = Array[i]
           minIndex = i
-  # print(max)
-  # print(min)
   print(minIndex+1, maxIndex+1)`;
   return (
     <React.Fragment>
