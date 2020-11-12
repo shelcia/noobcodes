@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
+import { ThemeContext } from "../context/ThemeContext";
 
-const SideNav = ({ darkTheme }) => {
+const SideNav = () => {
+  const [darkTheme] = useContext(ThemeContext);
+
   return (
     <React.Fragment>
       <div

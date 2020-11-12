@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { CopyBlock, dracula, github } from "react-code-blocks";
+import { ThemeContext } from "../context/ThemeContext";
 import SideNav from "../mainpage/SideNav";
 
-const MinMax = ({ darkTheme }) => {
+const MinMax = () => {
+  const [darkTheme] = useContext(ThemeContext);
+
   const languageDemo = `N = int(input(""))
   Array = list(map(int, input().split(' ')[:N]))
   max = Array[0]

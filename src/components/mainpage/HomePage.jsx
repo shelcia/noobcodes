@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ThemeContext } from "../context/ThemeContext";
 import SideNav from "./SideNav";
 
-const HomePage = ({ darkTheme }) => {
+const HomePage = () => {
+  const [darkTheme] = useContext(ThemeContext);
+
   return (
     <React.Fragment>
       <div
