@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { CopyBlock, dracula, github } from "react-code-blocks";
 import { ThemeContext } from "../context/ThemeContext";
-import SideNav from "../mainpage/SideNav";
+import SideNav from "../SideNav";
 
 const MinMax = () => {
   const [darkTheme] = useContext(ThemeContext);

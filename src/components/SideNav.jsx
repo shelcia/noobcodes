@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
-import { ThemeContext } from "../context/ThemeContext";
+import { ThemeContext } from "./context/ThemeContext";
 
 const SideNav = () => {
   const [darkTheme] = useContext(ThemeContext);
@@ -13,10 +13,14 @@ const SideNav = () => {
             ? "nav flex-column nav-pills shadow"
             : "nav flex-column nav-pills shadow-sm"
         }
-        id="v-pills-tab"
-        // role="tablist"
-        aria-orientation="vertical"
       >
+        <a href="#demo" data-toggle="collapse">
+          Collapsible
+        </a>
+
+        <div id="demo" class="collapse">
+          Lorem ipsum dolor text....
+        </div>
         <NavLink className="nav-link" strict to="/">
           Home
         </NavLink>

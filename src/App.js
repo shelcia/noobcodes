@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Admin from "./components/adminpage/admin";
+import Admin from "./components/adminpage/Admin";
 import MinMax from "./components/array/MinMax";
 import { ThemeProvider } from "./components/context/ThemeContext";
 import Error404 from "./components/Error404";
