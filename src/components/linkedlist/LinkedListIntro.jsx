@@ -3,6 +3,7 @@ import React, { useContext } from "react";
 import { CopyBlock, dracula, github } from "react-code-blocks";
 import { ThemeContext } from "../context/ThemeContext";
 import SideNav from "../SideNav";
+import LinkedIntro from "../../assets/output/linkedList/linkedIntro.png";
 
 const LinkedListIntro = () => {
   const [darkTheme] = useContext(ThemeContext);
@@ -56,13 +57,13 @@ if __name__ == '__main__':
           <div className="row" style={{ maxHeight: "90vh" }}>
             <div
               className="col-sm-3 mt-4"
-              style={{ maxHeight: "86vh", overflowY: "scroll" }}
+              style={{ maxHeight: "87vh", overflowY: "scroll" }}
             >
               <SideNav />
             </div>
             <div
               className="col-sm-9 mt-4"
-              style={{ maxHeight: "86vh", overflowY: "scroll" }}
+              style={{ maxHeight: "87vh", overflowY: "scroll" }}
             >
               <h2 className={darkTheme ? "text-light" : "text-dark"}>Code</h2>
               <hr />
@@ -74,6 +75,11 @@ if __name__ == '__main__':
                 wrapLines={true}
                 codeBlock
               />
+              <h2 className={darkTheme ? "text-light" : "text-dark"}>Output</h2>
+              <hr />
+              <div className="text-center mb-4">
+                <img src={LinkedIntro} alt="" style={{ height: "300px" }} />
+              </div>
             </div>
           </div>
         </div>

@@ -92,13 +92,13 @@ const LinkedListInsertion = () => {
           <div className="row" style={{ maxHeight: "90vh" }}>
             <div
               className="col-sm-3 mt-4"
-              style={{ maxHeight: "86vh", overflowY: "scroll" }}
+              style={{ maxHeight: "87vh", overflowY: "scroll" }}
             >
               <SideNav />
             </div>
             <div
               className="col-sm-9 mt-4"
-              style={{ maxHeight: "86vh", overflowY: "scroll" }}
+              style={{ maxHeight: "87vh", overflowY: "scroll" }}
             >
               <h2 className={darkTheme ? "text-light" : "text-dark"}>Code</h2>
               <hr />
