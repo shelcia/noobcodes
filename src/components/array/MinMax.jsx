@@ -26,26 +26,28 @@ const MinMax = () => {
         className={darkTheme ? "bg-dark text-light" : "bg-light text-dark"}
         style={{ height: "90vh" }}
       >
-        <div className="row">
-          <div className="col-sm-3 mt-4">
-            <SideNav />
-          </div>
-          <div className="col-sm-9 mt-4">
-            <div
-              className={
-                darkTheme
-                  ? "container shadow p-0 w-75"
-                  : "container shadow-sm p-0 w-75"
-              }
-            >
-              <CopyBlock
-                language={`python`}
-                text={languageDemo}
-                showLineNumbers={true}
-                theme={darkTheme ? dracula : github}
-                wrapLines={true}
-                codeBlock
-              />
+        <div className="container" style={{ maxWidth: "95%" }}>
+          <div className="row">
+            <div className="col-sm-3 mt-4">
+              <SideNav />
+            </div>
+            <div className="col-sm-9 mt-4">
+              <div
+                className={
+                  darkTheme
+                    ? "container shadow p-0 w-75"
+                    : "container shadow-sm p-0 w-75"
+                }
+              >
+                <CopyBlock
+                  language={`python`}
+                  text={languageDemo}
+                  showLineNumbers={true}
+                  theme={darkTheme ? dracula : github}
+                  wrapLines={true}
+                  codeBlock
+                />
+              </div>
             </div>
           </div>
         </div>

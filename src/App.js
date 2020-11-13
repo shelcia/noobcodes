@@ -4,6 +4,8 @@ import Admin from "./components/adminpage/Admin";
 import MinMax from "./components/array/MinMax";
 import { ThemeProvider } from "./components/context/ThemeContext";
 import Error404 from "./components/Error404";
+import LinkedListInsertion from "./components/linkedlist/LinkedListInsertion";
+import LinkedListIntro from "./components/linkedlist/LinkedListIntro";
 import HomePage from "./components/mainpage/HomePage";
 import Navbar from "./Navbar";
 import "./styles/style.css";
@@ -17,6 +19,12 @@ const App = () => {
           <Switch>
             <Route path="/" exact component={HomePage} />
             <Route path="/arrayprograms" exact component={MinMax} />
+            <Route path="/linkedlistintro" exact component={LinkedListIntro} />
+            <Route
+              path="/linkedlistinsertion"
+              exact
+              component={LinkedListInsertion}
+            />
             <Route path="/admin/rombakushithaan" exact component={Admin} />
             <Route component={Error404} />
           </Switch>

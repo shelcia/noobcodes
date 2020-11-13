@@ -1,10 +1,11 @@
 import React, { useContext } from "react";
+
+import { CopyBlock, dracula, github } from "react-code-blocks";
 import { ThemeContext } from "../context/ThemeContext";
 import SideNav from "../SideNav";
 
-const HomePage = () => {
-  const [darkTheme] = useContext(ThemeContext);
-
+const LinkedListIntro = () => {
+  const darkTheme = useContext(ThemeContext);
   return (
     <React.Fragment>
       <div
@@ -17,13 +18,14 @@ const HomePage = () => {
               <SideNav />
             </div>
             <div className="col-sm-9 mt-4 border border-primary">
-              <h1>Hello People !</h1>
-              <hr />
-              <p>
-                No great stuff yet !!. It's hard to learn DS and Algos. So i
-                thought i will create a website which i love to do and also
-                learning DS and algo coz this is gonne be ds and algo website
-              </p>
+              <CopyBlock
+                language={`python`}
+                text={`python`}
+                showLineNumbers={true}
+                theme={darkTheme ? dracula : github}
+                wrapLines={true}
+                codeBlock
+              />
             </div>
           </div>
         </div>
@@ -32,4 +34,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default LinkedListIntro;
