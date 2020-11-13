@@ -42,7 +42,7 @@ const SideNav = () => {
                   : "list-group-item  p-0"
               }
             >
-              <NavLink className="nav-link pl-5" exact to="/linkedlists">
+              <NavLink className="nav-link pl-5" exact to="/linkedlistsintro">
                 Linked Lists Intro
               </NavLink>
             </li>
@@ -53,7 +53,11 @@ const SideNav = () => {
                   : "list-group-item  p-0"
               }
             >
-              <NavLink className="nav-link pl-5" exact to="/linkedlistsintro">
+              <NavLink
+                className="nav-link pl-5"
+                exact
+                to="/linkedlistsinsertion"
+              >
                 Inserting Linked List
               </NavLink>
             </li>

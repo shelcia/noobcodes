@@ -19,9 +19,9 @@ const App = () => {
           <Switch>
             <Route path="/" exact component={HomePage} />
             <Route path="/arrayprograms" exact component={MinMax} />
-            <Route path="/linkedlistintro" exact component={LinkedListIntro} />
+            <Route path="/linkedlistsintro" exact component={LinkedListIntro} />
             <Route
-              path="/linkedlistinsertion"
+              path="/linkedlistsinsertion"
               exact
               component={LinkedListInsertion}
             />

@@ -13,11 +13,11 @@ const LinkedListInsertion = () => {
         style={{ height: "90vh" }}
       >
         <div className="container" style={{ maxWidth: "95%" }}>
-          <div className="row border">
-            <div className="col-sm-3 mt-4 border border-warning">
+          <div className="row ">
+            <div className="col-sm-3 mt-4 ">
               <SideNav />
             </div>
-            <div className="col-sm-9 mt-4 border border-primary">
+            <div className="col-sm-9 mt-4 ">
               <CopyBlock
                 language={`python`}
                 text={`python`}
