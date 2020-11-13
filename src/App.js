@@ -4,6 +4,7 @@ import Admin from "./components/adminpage/Admin";
 import MinMax from "./components/array/MinMax";
 import { ThemeProvider } from "./components/context/ThemeContext";
 import Error404 from "./components/Error404";
+import LinkedListDeletion from "./components/linkedlist/LinkedListDeletion";
 import LinkedListInsertion from "./components/linkedlist/LinkedListInsertion";
 import LinkedListIntro from "./components/linkedlist/LinkedListIntro";
 import HomePage from "./components/mainpage/HomePage";
@@ -24,6 +25,11 @@ const App = () => {
               path="/linkedlistsinsertion"
               exact
               component={LinkedListInsertion}
+            />
+            <Route
+              path="/linkedlistsdeletion"
+              exact
+              component={LinkedListDeletion}
             />
             <Route path="/admin/rombakushithaan" exact component={Admin} />
             <Route component={Error404} />

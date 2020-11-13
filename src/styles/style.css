@@ -1,5 +1,5 @@
 * {
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 code {
@@ -16,7 +16,7 @@ code {
 }
 
 .bg-dark .react-syntax-highlighter-line-number {
-  color: #016bd5;
+  color: rgba(255, 255, 255, 0.87);
 }
 
 .bg-dark code {
@@ -71,7 +71,7 @@ code {
 
 .bg-light code {
   font-family: "Menlo", monospace !important;
-  color: #282c34;
+  color: #c46800;
 }
 
 .bg-light code span {

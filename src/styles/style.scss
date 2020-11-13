@@ -4,8 +4,10 @@ $bg: #282c34;
 $black: #343a40;
 $whiteBorder: rgba(255, 255, 255, 0.1);
 $whitehover: rgb(228, 228, 228);
+
 * {
-  font-family: "Roboto", sans-serif;
+  // font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 code {
@@ -20,7 +22,7 @@ code {
   }
 
   .react-syntax-highlighter-line-number {
-    color: #016bd5;
+    color: $white;
   }
 
   code {
@@ -70,7 +72,8 @@ code {
   }
   code {
     font-family: "Menlo", monospace !important;
-    color: $bg;
+    // color: $bg;
+    color: #c46800;
     span {
       font-family: "Menlo", monospace !important;
     }

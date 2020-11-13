@@ -78,8 +78,12 @@ const SideNav = () => {
                   : "list-group-item bg-light p-0"
               }
             >
-              <NavLink className="nav-link pl-5" exact to="/linkedlistsdelkey">
-                Deleting Linked List (Deleting a given key)
+              <NavLink
+                className="nav-link pl-5"
+                exact
+                to="/linkedlistsdeletion"
+              >
+                Deleting Linked List
               </NavLink>
             </li>
             <li
