@@ -8,43 +8,79 @@ const LinkedListInsertion = () => {
   const [darkTheme] = useContext(ThemeContext);
 
   const code = `
-# CREATING LINKEDLIST
-# 1.VALUE
-# 2.NEXT NODE
+  # INSERTION OF NODE AT END , BEGGINING AND AT GIVEN POS VALUE
 
-
-class linkedListNode:
-    def __init__(self, value, nextNode=None):
-        self.value = value
-        self.nextNode = nextNode
-
-
-class linkedList:
-    # FUNCTION TO PRINT THE LINKEDLIST
-    def printList(self, node1):
-        currentNode = node1
-        while True:
-            print(currentNode.value, "->", end="")
-            if(currentNode.nextNode is None):
-                print("None")
-                break
-            currentNode = currentNode.nextNode
-
-
-# DRIVER FUNCTION
-
-if __name__ == '__main__':
-
-    node1 = linkedListNode("2")
-    node2 = linkedListNode("11")
-    node3 = linkedListNode("1999")
-
-    node1.nextNode = node2
-    node2.nextNode = node3
-    node3.nextNode = None
-
-    printList = linkedList()  # CREATE INSTANCE
-    printList.printList(node1)  # CALL THE FUNCTION
+  class linkedListNode:
+      def __init__(self, value, nextNode=None):
+          self.value = value
+          self.nextNode = nextNode
+  
+  
+  class linkedList:
+  
+      def __init__(self, head=None):
+          self.head = head
+  
+      def printList(self):
+          currentNode = self.head
+          while currentNode is not None:
+              print(currentNode.value, "->", end="")
+              currentNode = currentNode.nextNode
+          print("None")
+  
+      def insertAtEnd(self, value):
+          node = linkedListNode(value)
+          if(self.head is None):
+              self.head = node
+              return
+          currentNode = self.head
+          while True:
+              if(currentNode.nextNode is None):
+                  currentNode.nextNode = node
+                  break
+              currentNode = currentNode.nextNode
+  
+      def insertAtBeginning(self, value):
+          node = linkedListNode(value)
+          if(self.head is None):
+              self.head = node
+              return
+          node.nextNode = self.head
+          self.head = node
+  
+      def insertAtPos(self, value, prev_value):
+          node = linkedListNode(value)
+          if(self.head is None):
+              self.head = node
+              return
+  
+          currentNode = self.head
+          while currentNode.value is not prev_value:
+              if(currentNode.nextNode is None):
+                  print("Node not found")
+                  break
+              prevNode = currentNode
+              currentNode = currentNode.nextNode
+  
+          prevNode.nextNode = node
+          node.nextNode = currentNode
+  
+  
+  if __name__ == '__main__':
+  
+      nodeCreation = linkedList()
+      nodeCreation.insertAtEnd("3")
+      nodeCreation.printList()
+      nodeCreation.insertAtEnd("5")
+      nodeCreation.printList()
+      nodeCreation.insertAtEnd("9")
+      nodeCreation.printList()
+      nodeCreation.insertAtBeginning("1")
+      nodeCreation.printList()
+      nodeCreation.insertAtPos("7", "9")
+      nodeCreation.printList()
+      nodeCreation.insertAtPos("7", "8")
+      nodeCreation.printList()
   `;
 
   return (
