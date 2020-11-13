@@ -26,20 +26,30 @@ const SideNav = () => {
           Arrays
         </a>
         <div id="array" className="collapse">
-          <NavLink className="nav-link" exact to="/arrayprograms">
-            Array
-          </NavLink>
+          <ul className="list-group list-group-flush">
+            <li
+              className={
+                darkTheme
+                  ? "list-group-item bg-dark p-0"
+                  : "list-group-item bg-light p-0"
+              }
+            >
+              <NavLink className="nav-link pl-5" exact to="/arrayprograms">
+                Array
+              </NavLink>
+            </li>
+          </ul>
         </div>
         <a href="#linkedlist" className="nav-link" data-toggle="collapse">
           Linked Lists
         </a>
         <div id="linkedlist" className="collapse">
-          <ul className="list-group">
+          <ul className="list-group list-group-flush">
             <li
               className={
                 darkTheme
                   ? "list-group-item bg-dark p-0"
-                  : "list-group-item  p-0"
+                  : "list-group-item bg-light p-0"
               }
             >
               <NavLink className="nav-link pl-5" exact to="/linkedlistsintro">
@@ -50,7 +60,7 @@ const SideNav = () => {
               className={
                 darkTheme
                   ? "list-group-item bg-dark p-0"
-                  : "list-group-item  p-0"
+                  : "list-group-item bg-light p-0"
               }
             >
               <NavLink
@@ -65,7 +75,7 @@ const SideNav = () => {
               className={
                 darkTheme
                   ? "list-group-item bg-dark p-0"
-                  : "list-group-item  p-0"
+                  : "list-group-item bg-light p-0"
               }
             >
               <NavLink className="nav-link pl-5" exact to="/linkedlistsdelkey">
@@ -76,7 +86,7 @@ const SideNav = () => {
               className={
                 darkTheme
                   ? "list-group-item bg-dark p-0"
-                  : "list-group-item  p-0"
+                  : "list-group-item bg-light p-0"
               }
             >
               <NavLink className="nav-link pl-5" exact to="/linkedlistsdelpos">

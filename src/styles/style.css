@@ -10,13 +10,22 @@ code {
   background-color: #282c34 !important;
 }
 
+.bg-dark .sc-gsTCUz,
+.bg-dark .irsCXf {
+  font-family: "Menlo", monospace !important;
+}
+
 .bg-dark .react-syntax-highlighter-line-number {
-  color: rgba(255, 255, 255, 0.87);
+  color: #016bd5;
 }
 
 .bg-dark code {
-  color: rgba(255, 255, 255, 0.87) !important;
-  letter-spacing: 1px;
+  font-family: "Menlo", monospace !important;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+.bg-dark code span {
+  font-family: "Menlo", monospace !important;
 }
 
 .bg-dark .border-right {
@@ -55,8 +64,22 @@ code {
   color: rgba(255, 255, 255, 0.87) !important;
 }
 
+.bg-light .sc-gsTCUz,
+.bg-light .irsCXf {
+  font-family: "Menlo", monospace !important;
+}
+
 .bg-light code {
-  letter-spacing: 1px;
+  font-family: "Menlo", monospace !important;
+  color: #282c34;
+}
+
+.bg-light code span {
+  font-family: "Menlo", monospace !important;
+}
+
+.bg-light .react-syntax-highlighter-line-number {
+  color: #343a40;
 }
 
 .bg-light a {

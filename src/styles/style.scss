@@ -14,14 +14,21 @@ code {
 
 .bg-dark {
   background-color: $bg !important;
+  .sc-gsTCUz,
+  .irsCXf {
+    font-family: "Menlo", monospace !important;
+  }
 
   .react-syntax-highlighter-line-number {
-    color: $white;
+    color: #016bd5;
   }
 
   code {
-    color: $white !important;
-    letter-spacing: 1px;
+    font-family: "Menlo", monospace !important;
+    color: $white;
+    span {
+      font-family: "Menlo", monospace !important;
+    }
   }
 
   .border-right {
@@ -57,8 +64,19 @@ code {
 }
 
 .bg-light {
+  .sc-gsTCUz,
+  .irsCXf {
+    font-family: "Menlo", monospace !important;
+  }
   code {
-    letter-spacing: 1px;
+    font-family: "Menlo", monospace !important;
+    color: $bg;
+    span {
+      font-family: "Menlo", monospace !important;
+    }
+  }
+  .react-syntax-highlighter-line-number {
+    color: $black;
   }
 
   a {

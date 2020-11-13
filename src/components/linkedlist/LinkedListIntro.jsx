@@ -54,7 +54,7 @@ if __name__ == '__main__':
         style={{ maxHeight: "90vh" }}
       >
         <div className="container" style={{ maxWidth: "95%" }}>
-          <div className="row border" style={{ maxHeight: "90vh" }}>
+          <div className="row" style={{ maxHeight: "90vh" }}>
             <div
               className="col-sm-3 mt-4"
               style={{ maxHeight: "86vh", overflowY: "scroll" }}
@@ -62,7 +62,7 @@ if __name__ == '__main__':
               <SideNav />
             </div>
             <div
-              className="col-sm-9 mt-4 border border-primary"
+              className="col-sm-9 mt-4"
               style={{ maxHeight: "86vh", overflowY: "scroll" }}
             >
               <CopyBlock
