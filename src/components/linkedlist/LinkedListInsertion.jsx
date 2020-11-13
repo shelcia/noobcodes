@@ -80,8 +80,7 @@ const LinkedListInsertion = () => {
       nodeCreation.insertAtPos("7", "9")
       nodeCreation.printList()
       nodeCreation.insertAtPos("7", "8")
-      nodeCreation.printList()
-  `;
+      nodeCreation.printList()`;
 
   return (
     <React.Fragment>
@@ -101,6 +100,8 @@ const LinkedListInsertion = () => {
               className="col-sm-9 mt-4"
               style={{ maxHeight: "86vh", overflowY: "scroll" }}
             >
+              <h2 className={darkTheme ? "text-light" : "text-dark"}>Code</h2>
+              <hr />
               <CopyBlock
                 language={`python`}
                 text={code}

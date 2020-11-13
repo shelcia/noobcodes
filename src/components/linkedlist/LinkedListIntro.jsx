@@ -7,8 +7,7 @@ import SideNav from "../SideNav";
 const LinkedListIntro = () => {
   const [darkTheme] = useContext(ThemeContext);
 
-  const code = `
-# CREATING LINKEDLIST
+  const code = `# CREATING LINKEDLIST
 # 1.VALUE
 # 2.NEXT NODE
 
@@ -65,6 +64,8 @@ if __name__ == '__main__':
               className="col-sm-9 mt-4"
               style={{ maxHeight: "86vh", overflowY: "scroll" }}
             >
+              <h2 className={darkTheme ? "text-light" : "text-dark"}>Code</h2>
+              <hr />
               <CopyBlock
                 language={`python`}
                 text={code}

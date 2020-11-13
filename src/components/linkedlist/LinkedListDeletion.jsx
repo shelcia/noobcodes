@@ -88,8 +88,7 @@ if __name__ == "__main__":
     node.delAtEnd()
     node.printList()
     node.delAtPos("7")
-    node.printList()
-`;
+    node.printList()`;
 
   return (
     <React.Fragment>
@@ -109,6 +108,8 @@ if __name__ == "__main__":
               className="col-sm-9 mt-4"
               style={{ maxHeight: "86vh", overflowY: "scroll" }}
             >
+              <h2 className={darkTheme ? "text-light" : "text-dark"}>Code</h2>
+              <hr />
               <CopyBlock
                 language={`python`}
                 text={code}
