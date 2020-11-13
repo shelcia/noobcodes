@@ -2,6 +2,28 @@
   font-family: "Poppins", sans-serif;
 }
 
+body ::-webkit-scrollbar {
+  height: 5px;
+  /*for horizonatal scrollbar*/
+  width: 5px;
+}
+
+/* Track */
+body ::-webkit-scrollbar-track {
+  background: #f1f1f100;
+}
+
+/* Handle */
+body ::-webkit-scrollbar-thumb {
+  background: #007bff;
+  border-radius: 2.5px;
+}
+
+/* Handle on hover */
+body ::-webkit-scrollbar-thumb:hover {
+  background: #007bff;
+}
+
 code {
   font-family: "Menlo", monospace !important;
 }
@@ -16,7 +38,7 @@ code {
 }
 
 .bg-dark .react-syntax-highlighter-line-number {
-  color: rgba(255, 255, 255, 0.87);
+  color: #0076c4;
 }
 
 .bg-dark code {
