@@ -3,6 +3,7 @@ import React, { useContext } from "react";
 import { CopyBlock, dracula, github } from "react-code-blocks";
 import { ThemeContext } from "../context/ThemeContext";
 import SideNav from "../SideNav";
+import LinkedDel from "../../assets/output/linkedList/linkedDel.png";
 
 const LinkedListDeletion = () => {
   const [darkTheme] = useContext(ThemeContext);
@@ -45,6 +46,7 @@ class linkedList:
 
         currentNode = self.head
         self.head = currentNode.nextNode
+        currentNode = None
 
     def delAtEnd(self):
         if(self.head is None):
@@ -57,8 +59,9 @@ class linkedList:
             prevNode = currentNode
             currentNode = currentNode.nextNode
         prevNode.nextNode = None
+        currentNode = None
 
-    def delAtPos(self, value):
+    def delForValue(self, value):
 
         currentNode = self.head
         while currentNode.value is not value:
@@ -68,6 +71,7 @@ class linkedList:
             currentNode = currentNode.nextNode
 
         prevNode.nextNode = currentNode.nextNode
+        currentNode = None
 
 
 if __name__ == "__main__":
@@ -87,27 +91,22 @@ if __name__ == "__main__":
     node.printList()
     node.delAtEnd()
     node.printList()
-    node.delAtPos("7")
+    node.delForValue("7")
     node.printList()`;
 
   return (
     <React.Fragment>
       <div
-        className={darkTheme ? "bg-dark text-light" : "bg-light text-dark"}
-        style={{ maxHeight: "90vh" }}
+        className={
+          darkTheme ? "bg-dark text-light h-90" : "bg-light text-dark h-90"
+        }
       >
-        <div className="container" style={{ maxWidth: "95%" }}>
-          <div className="row" style={{ maxHeight: "90vh" }}>
-            <div
-              className="col-sm-3 mt-4"
-              style={{ maxHeight: "87vh", overflowY: "scroll" }}
-            >
+        <div className="container w-95">
+          <div className="row h-90">
+            <div className="col-sm-3 code-container">
               <SideNav />
             </div>
-            <div
-              className="col-sm-9 mt-4"
-              style={{ maxHeight: "87vh", overflowY: "scroll" }}
-            >
+            <div className="col-sm-9 code-container">
               <h2 className={darkTheme ? "text-light" : "text-dark"}>Code</h2>
               <hr />
               <CopyBlock
@@ -118,6 +117,13 @@ if __name__ == "__main__":
                 wrapLines={true}
                 codeBlock
               />
+              <h2 className={darkTheme ? "text-light mt-4" : "text-dark mt-4"}>
+                Output
+              </h2>
+              <hr />
+              <div className="text-center mb-4">
+                <img src={LinkedDel} alt="" className="output-img" />
+              </div>
             </div>
           </div>
         </div>

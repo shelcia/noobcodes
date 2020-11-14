@@ -124,3 +124,18 @@ code {
     border-radius: 0px;
   }
 }
+
+.output-img {
+  height: 300px;
+}
+.code-container {
+  max-height: 87vh;
+  overflow-y: scroll;
+  margin-top: 3vh;
+}
+.h-90 {
+  height: 90vh !important;
+}
+.w-95 {
+  max-width: 95% !important;
+}

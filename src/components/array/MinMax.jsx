@@ -23,15 +23,16 @@ const MinMax = () => {
   return (
     <React.Fragment>
       <div
-        className={darkTheme ? "bg-dark text-light" : "bg-light text-dark"}
-        style={{ height: "90vh" }}
+        className={
+          darkTheme ? "bg-dark text-light h-90" : "bg-light text-dark h-90"
+        }
       >
-        <div className="container" style={{ maxWidth: "95%" }}>
+        <div className="container w-95">
           <div className="row">
-            <div className="col-sm-3 mt-4">
+            <div className="col-sm-3 code-container">
               <SideNav />
             </div>
-            <div className="col-sm-9 mt-4">
+            <div className="col-sm-9 code-container">
               <div
                 className={
                   darkTheme

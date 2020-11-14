@@ -50,21 +50,16 @@ if __name__ == '__main__':
   return (
     <React.Fragment>
       <div
-        className={darkTheme ? "bg-dark text-light" : "bg-light text-dark"}
-        style={{ maxHeight: "90vh" }}
+        className={
+          darkTheme ? "bg-dark text-light h-90" : "bg-light text-dark h-90"
+        }
       >
-        <div className="container" style={{ maxWidth: "95%" }}>
-          <div className="row" style={{ maxHeight: "90vh" }}>
-            <div
-              className="col-sm-3 mt-4"
-              style={{ maxHeight: "87vh", overflowY: "scroll" }}
-            >
+        <div className="container w-95">
+          <div className="row h-90">
+            <div className="col-sm-3 code-container">
               <SideNav />
             </div>
-            <div
-              className="col-sm-9 mt-4"
-              style={{ maxHeight: "87vh", overflowY: "scroll" }}
-            >
+            <div className="col-sm-9 code-container">
               <h2 className={darkTheme ? "text-light" : "text-dark"}>Code</h2>
               <hr />
               <CopyBlock
@@ -75,10 +70,12 @@ if __name__ == '__main__':
                 wrapLines={true}
                 codeBlock
               />
-              <h2 className={darkTheme ? "text-light" : "text-dark"}>Output</h2>
+              <h2 className={darkTheme ? "text-light mt-4" : "text-dark mt-4"}>
+                Output
+              </h2>
               <hr />
               <div className="text-center mb-4">
-                <img src={LinkedIntro} alt="" style={{ height: "300px" }} />
+                <img src={LinkedIntro} alt="" className="output-img" />
               </div>
             </div>
           </div>
