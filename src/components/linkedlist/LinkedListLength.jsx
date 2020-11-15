@@ -4,7 +4,7 @@ import { CopyBlock, dracula, github } from "react-code-blocks";
 import { ThemeContext } from "../context/ThemeContext";
 import SideNav from "../SideNav";
 
-const LinkedListPosDel = () => {
+const LinkedListLength = () => {
   const [darkTheme] = useContext(ThemeContext);
 
   const code = `
@@ -98,4 +98,4 @@ const LinkedListPosDel = () => {
   );
 };
 
-export default LinkedListPosDel;
+export default LinkedListLength;

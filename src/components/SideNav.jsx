@@ -18,7 +18,7 @@ const SideNav = () => {
           Home
         </a>
         <div id="home" className="collapse">
-          <NavLink className="nav-link" strict to="/">
+          <NavLink className="nav-link pl-5" strict to="/">
             Home
           </NavLink>
         </div>
@@ -35,7 +35,7 @@ const SideNav = () => {
               }
             >
               <NavLink className="nav-link pl-5" exact to="/arrayprograms">
-                Array
+                Min Max
               </NavLink>
             </li>
           </ul>
@@ -100,8 +100,27 @@ const SideNav = () => {
               >
                 Deleting Linked List (given position)
               </NavLink>
+            </li>
+            <li
+              className={
+                darkTheme
+                  ? "list-group-item bg-dark p-0"
+                  : "list-group-item bg-light p-0"
+              }
+            >
               <NavLink className="nav-link pl-5" exact to="/linkedlistslength">
                 Linked List Length (Iterative and Recursive)
+              </NavLink>
+            </li>
+            <li
+              className={
+                darkTheme
+                  ? "list-group-item bg-dark p-0"
+                  : "list-group-item bg-light p-0"
+              }
+            >
+              <NavLink className="nav-link pl-5" exact to="/linkedlistssearch">
+                Linked List Search (Iterative and Recursive)
               </NavLink>
             </li>
           </ul>

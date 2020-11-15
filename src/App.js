@@ -12,6 +12,7 @@ import LinkedListLength from "./components/linkedlist/LinkedListLength";
 import HomePage from "./components/mainpage/HomePage";
 import Navbar from "./Navbar";
 import "./styles/style.css";
+import LinkedListSearch from "./components/linkedlist/LinkedListSearch";
 
 const App = () => {
   return (
@@ -42,6 +43,11 @@ const App = () => {
               path="/linkedlistslength"
               exact
               component={LinkedListLength}
+            />
+            <Route
+              path="/linkedlistssearch"
+              exact
+              component={LinkedListSearch}
             />
             <Route path="/admin/rombakushithaan" exact component={Admin} />
             <Route component={Error404} />
