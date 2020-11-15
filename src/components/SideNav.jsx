@@ -100,6 +100,9 @@ const SideNav = () => {
               >
                 Deleting Linked List (given position)
               </NavLink>
+              <NavLink className="nav-link pl-5" exact to="/linkedlistslength">
+                Linked List Length (Iterative and Recursive)
+              </NavLink>
             </li>
           </ul>
         </div>

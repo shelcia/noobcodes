@@ -8,6 +8,7 @@ import LinkedListDeletion from "./components/linkedlist/LinkedListDeletion";
 import LinkedListInsertion from "./components/linkedlist/LinkedListInsertion";
 import LinkedListIntro from "./components/linkedlist/LinkedListIntro";
 import LinkedListPosDel from "./components/linkedlist/LinkedListPosDel";
+import LinkedListLength from "./components/linkedlist/LinkedListLength";
 import HomePage from "./components/mainpage/HomePage";
 import Navbar from "./Navbar";
 import "./styles/style.css";
@@ -36,6 +37,11 @@ const App = () => {
               path="/linkedlistspositiondeletion"
               exact
               component={LinkedListPosDel}
+            />
+            <Route
+              path="/linkedlistslength"
+              exact
+              component={LinkedListLength}
             />
             <Route path="/admin/rombakushithaan" exact component={Admin} />
             <Route component={Error404} />
