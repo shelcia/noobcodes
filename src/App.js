@@ -13,46 +13,53 @@ import HomePage from "./components/mainpage/HomePage";
 import Navbar from "./Navbar";
 import "./styles/style.css";
 import LinkedListSearch from "./components/linkedlist/LinkedListSearch";
+import { CodeProivder } from "./components/context/CodeContext";
 
 const App = () => {
   return (
     <React.Fragment>
       <ThemeProvider>
-        <BrowserRouter>
-          <Navbar />
-          <Switch>
-            <Route path="/" exact component={HomePage} />
-            <Route path="/arrayprograms" exact component={MinMax} />
-            <Route path="/linkedlistsintro" exact component={LinkedListIntro} />
-            <Route
-              path="/linkedlistsinsertion"
-              exact
-              component={LinkedListInsertion}
-            />
-            <Route
-              path="/linkedlistsdeletion"
-              exact
-              component={LinkedListDeletion}
-            />
-            <Route
-              path="/linkedlistspositiondeletion"
-              exact
-              component={LinkedListPosDel}
-            />
-            <Route
-              path="/linkedlistslength"
-              exact
-              component={LinkedListLength}
-            />
-            <Route
-              path="/linkedlistssearch"
-              exact
-              component={LinkedListSearch}
-            />
-            <Route path="/admin/rombakushithaan" exact component={Admin} />
-            <Route component={Error404} />
-          </Switch>
-        </BrowserRouter>
+        <CodeProivder>
+          <BrowserRouter>
+            <Navbar />
+            <Switch>
+              <Route path="/" exact component={HomePage} />
+              <Route path="/arrayprograms" exact component={MinMax} />
+              <Route
+                path="/linkedlistsintro"
+                exact
+                component={LinkedListIntro}
+              />
+              <Route
+                path="/linkedlistsinsertion"
+                exact
+                component={LinkedListInsertion}
+              />
+              <Route
+                path="/linkedlistsdeletion"
+                exact
+                component={LinkedListDeletion}
+              />
+              <Route
+                path="/linkedlistspositiondeletion"
+                exact
+                component={LinkedListPosDel}
+              />
+              <Route
+                path="/linkedlistslength"
+                exact
+                component={LinkedListLength}
+              />
+              <Route
+                path="/linkedlistssearch"
+                exact
+                component={LinkedListSearch}
+              />
+              <Route path="/admin/rombakushithaan" exact component={Admin} />
+              <Route component={Error404} />
+            </Switch>
+          </BrowserRouter>
+        </CodeProivder>
       </ThemeProvider>
     </React.Fragment>
   );

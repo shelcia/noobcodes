@@ -1,25 +1,29 @@
 import React, { useContext } from "react";
 import { CopyBlock, dracula, github } from "react-code-blocks";
 import { ThemeContext } from "../context/ThemeContext";
+import { CodeContext } from "../context/CodeContext";
+
 import SideNav from "../SideNav";
 
 const MinMax = () => {
   const [darkTheme] = useContext(ThemeContext);
+  const [code] = useContext(CodeContext);
+  console.log(code[0].code);
 
-  const languageDemo = `N = int(input(""))
-  Array = list(map(int, input().split(' ')[:N]))
-  max = Array[0]
-  min = Array[0]
-  maxIndex = 0
-  minIndex = 0
-  for i in range(1, N):
-      if(max < Array[i]):
-          max = Array[i]
-          maxIndex = i
-      elif(min > Array[i]):
-          min = Array[i]
-          minIndex = i
-  print(minIndex+1, maxIndex+1)`;
+  // const languageDemo = `N = int(input(""))
+  // Array = list(map(int, input().split(' ')[:N]))
+  // max = Array[0]
+  // min = Array[0]
+  // maxIndex = 0
+  // minIndex = 0
+  // for i in range(1, N):
+  //     if(max < Array[i]):
+  //         max = Array[i]
+  //         maxIndex = i
+  //     elif(min > Array[i]):
+  //         min = Array[i]
+  //         minIndex = i
+  // print(minIndex+1, maxIndex+1)`;
   return (
     <React.Fragment>
       <div
@@ -42,7 +46,7 @@ const MinMax = () => {
               >
                 <CopyBlock
                   language={`python`}
-                  text={languageDemo}
+                  text={code[0].code}
                   showLineNumbers={true}
                   theme={darkTheme ? dracula : github}
                   wrapLines={true}
