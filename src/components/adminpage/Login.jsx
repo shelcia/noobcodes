@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
-import Navbar from "../LandingPage/Navbar";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -48,7 +47,6 @@ const Login = () => {
   return (
     <React.Fragment>
       <ToastContainer />
-      <Navbar />
       <div className="container" id="container">
         <div className="row">
           <div className="col-sm-6">

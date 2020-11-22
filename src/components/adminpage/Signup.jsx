@@ -1,12 +1,10 @@
 import React, { useRef, useState } from "react";
-import BlogLogin from "../../assets/bloglogin.png";
 import { Link } from "react-router-dom";
-import Navbar from "../LandingPage/Navbar";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const Signin = () => {
+const Signup = () => {
   const name = useRef("");
   const email = useRef("");
   const password = useRef("");
@@ -36,9 +34,13 @@ const Signin = () => {
       .then((res) => {
         // console.log(res);
         setIsLoading(false);
-        sucessNotify(
-          "Account created succesfully ! you can go ahead and login."
-        );
+        if (res.data.status === "400") {
+          failedNotify(res.data.message);
+        } else {
+          sucessNotify(
+            "Account created succesfully ! you can go ahead and login."
+          );
+        }
       })
       .catch((error) => {
         setIsLoading(false);
@@ -49,12 +51,8 @@ const Signin = () => {
   return (
     <React.Fragment>
       <ToastContainer />
-      <Navbar />
       <div className="container" id="container">
         <div className="row">
-          <div className="col-sm-6">
-            <img src={BlogLogin} alt="blog" className="img-fluid" />
-          </div>
           <div className="col-sm-6">
             <h3 className="text-center">Signup</h3>
             <form className="was-validated" onSubmit={onSubmit}>
@@ -123,4 +121,4 @@ const Signin = () => {
   );
 };
 
-export default Signin;
+export default Signup;
