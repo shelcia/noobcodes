@@ -16,6 +16,7 @@ import LinkedListSearch from "./components/linkedlist/LinkedListSearch";
 import { CodeProivder } from "./components/context/CodeContext";
 import Login from "./components/adminpage/Login";
 import Signup from "./components/adminpage/Signup";
+import CodePage from "./components/CodePage";
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
             <Navbar />
             <Switch>
               <Route path="/" exact component={HomePage} />
+              <Route path="/code/:id" exact component={CodePage} />
               <Route path="/arrayprograms" exact component={MinMax} />
               <Route
                 path="/linkedlistsintro"
@@ -58,8 +60,16 @@ const App = () => {
                 component={LinkedListSearch}
               />
               <Route path="/admin/rombakushithaan" exact component={Admin} />
-              <Route path="/admin/rombakushithaan" exact component={Login} />
-              <Route path="/admin/rombakushithaan" exact component={Signup} />
+              <Route
+                path="/admin/rombakushithaan/login"
+                exact
+                component={Login}
+              />
+              <Route
+                path="/admin/rombakushithaan/signup"
+                exact
+                component={Signup}
+              />
               <Route component={Error404} />
             </Switch>
           </BrowserRouter>
