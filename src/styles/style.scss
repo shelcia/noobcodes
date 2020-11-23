@@ -84,6 +84,7 @@ code {
   .form-control {
     background-color: $black;
     color: $white;
+    border-color: $bg !important;
     &:focus {
       background-color: $black;
     }

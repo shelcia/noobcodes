@@ -11,6 +11,7 @@ import Login from "./components/adminpage/Login";
 import Signup from "./components/adminpage/Signup";
 import CodePage from "./components/CodePage";
 import Categories from "./components/adminpage/Categories";
+import EditPage from "./components/adminpage/EditPage";
 
 const App = () => {
   return (
@@ -26,6 +27,11 @@ const App = () => {
                 path="/admin/rombakushithaan/dashboard"
                 exact
                 component={Admin}
+              />
+              <Route
+                path="/admin/rombakushithaan/dashboard/code/:id"
+                exact
+                component={EditPage}
               />
               <Route
                 path="/admin/rombakushithaan/dashboard/:id"

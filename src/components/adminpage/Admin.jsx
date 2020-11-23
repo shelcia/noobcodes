@@ -1,5 +1,5 @@
-import React, { useContext, useState } from "react";
-import { NavLink } from "react-router-dom";
+import React, { useContext, useEffect, useState } from "react";
+import { NavLink, useHistory } from "react-router-dom";
 import { ThemeContext } from "../context/ThemeContext";
 
 const Admin = () => {
@@ -11,6 +11,15 @@ const Admin = () => {
       url: "/admin/rombakushithaan/dashboard/linkedlist",
     },
   ]);
+
+  const history = useHistory();
+
+  useEffect(() => {
+    if (!localStorage.getItem("NoobCode-Token")) {
+      history.push("/");
+    }
+  }, [history]);
+
   return (
     <React.Fragment>
       <div
