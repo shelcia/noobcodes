@@ -56,9 +56,6 @@ const Signup = () => {
   return (
     <React.Fragment>
       <ToastContainer />
-      {/* <div className="container" id="container">
-        <div className="row">
-          <div className="col-sm-6"> */}
       <div
         className={
           darkTheme ? "bg-dark text-light h-90" : "bg-light text-dark h-90"

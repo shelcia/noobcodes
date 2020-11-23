@@ -21,11 +21,15 @@ const SideNav = () => {
             : "nav flex-column nav-pills shadow-sm"
         }
       >
-        <a href="#home" className="nav-link" data-toggle="collapse">
+        <a
+          href="#home"
+          className="nav-link sidenav-links"
+          data-toggle="collapse"
+        >
           Home
         </a>
         <div id="home" className="collapse">
-          <NavLink className="nav-link pl-5" strict to="/">
+          <NavLink className="nav-link pl-5 sidenav-links" strict to="/">
             Home
           </NavLink>
         </div>

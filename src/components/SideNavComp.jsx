@@ -8,7 +8,7 @@ const SideNavComp = ({ codes, title }) => {
     <React.Fragment>
       <a
         href={`#${title.replace(/\s+/g, "").toLowerCase()}`}
-        className="nav-link"
+        className="nav-link sidenav-links"
         data-toggle="collapse"
       >
         {title}
@@ -25,9 +25,10 @@ const SideNavComp = ({ codes, title }) => {
                   ? "list-group-item bg-dark p-0"
                   : "list-group-item bg-light p-0"
               }
+              key={code.codeId}
             >
               <NavLink
-                className="nav-link pl-5"
+                className="nav-link pl-5 sidenav-links"
                 exact
                 to={`/code/${code.codeId}`}
               >

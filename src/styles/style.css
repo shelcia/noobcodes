@@ -58,20 +58,20 @@ code {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.bg-dark a {
+.bg-dark .sidenav-links {
   font-size: 1.1rem;
-  color: rgba(255, 255, 255, 0.87);
+  color: rgba(255, 255, 255, 0.87) !important;
   display: block;
 }
 
-.bg-dark a:hover {
+.bg-dark .sidenav-links:hover {
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
   background-color: #343a40;
   color: rgba(255, 255, 255, 0.87);
 }
 
-.bg-dark a:active {
+.bg-dark .sidenav-links:active {
   background-color: #343a40;
   color: #fff;
 }
@@ -117,20 +117,20 @@ code {
   color: #343a40;
 }
 
-.bg-light a {
+.bg-light .sidenav-links {
   font-size: 1.1rem;
   color: #282c34;
   display: block;
 }
 
-.bg-light a:hover {
+.bg-light .sidenav-links:hover {
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
   background-color: #e4e4e4;
   color: #282c34;
 }
 
-.bg-light a:active {
+.bg-light .sidenav-links:active {
   background-color: #e4e4e4;
   color: #282c34;
 }
@@ -158,5 +158,13 @@ code {
 
 .w-95 {
   max-width: 95% !important;
+}
+
+.background-dark {
+  background-color: #343a40;
+}
+
+.borderless {
+  border: none !important;
 }
 /*# sourceMappingURL=style.css.map */

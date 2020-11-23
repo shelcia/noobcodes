@@ -10,6 +10,7 @@ import { CodeProivder } from "./components/context/CodeContext";
 import Login from "./components/adminpage/Login";
 import Signup from "./components/adminpage/Signup";
 import CodePage from "./components/CodePage";
+import Categories from "./components/adminpage/Categories";
 
 const App = () => {
   return (
@@ -25,6 +26,11 @@ const App = () => {
                 path="/admin/rombakushithaan/dashboard"
                 exact
                 component={Admin}
+              />
+              <Route
+                path="/admin/rombakushithaan/dashboard/:id"
+                exact
+                component={Categories}
               />
               <Route
                 path="/admin/rombakushithaan/login"

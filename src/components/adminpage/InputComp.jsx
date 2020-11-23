@@ -1,7 +1,7 @@
 import React from "react";
 
 const InputComp = ({ value, name, isRequired, handler, type, feedback }) => {
-  console.log({ type, handler, value });
+  // console.log({ type, handler, value });
 
   return (
     <React.Fragment>
