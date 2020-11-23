@@ -21,7 +21,11 @@ const App = () => {
             <Switch>
               <Route path="/" exact component={HomePage} />
               <Route path="/code/:id" exact component={CodePage} />
-              <Route path="/admin/rombakushithaan" exact component={Admin} />
+              <Route
+                path="/admin/rombakushithaan/dashboard"
+                exact
+                component={Admin}
+              />
               <Route
                 path="/admin/rombakushithaan/login"
                 exact

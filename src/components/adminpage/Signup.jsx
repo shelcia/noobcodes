@@ -1,15 +1,20 @@
-import React, { useRef, useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import InputComp from "./InputComp";
+import { ThemeContext } from "../context/ThemeContext";
 
 const Signup = () => {
-  const name = useRef("");
-  const email = useRef("");
-  const password = useRef("");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
   const LINK = process.env.REACT_APP_ADMINAUTH_API;
   const [isLoading, setIsLoading] = useState(false);
+
+  const darkTheme = useContext(ThemeContext);
 
   const sucessNotify = (message) => {
     toast.success(message);
@@ -23,16 +28,16 @@ const Signup = () => {
     setIsLoading(true);
 
     const response = {
-      name: name.current.value,
-      email: email.current.value,
-      password: password.current.value,
+      name: name,
+      email: email,
+      password: password,
     };
     // console.log(response);
 
     axios
       .post(`${LINK}register`, response)
       .then((res) => {
-        // console.log(res);
+        console.log(res);
         setIsLoading(false);
         if (res.data.status === "400") {
           failedNotify(res.data.message);
@@ -51,68 +56,54 @@ const Signup = () => {
   return (
     <React.Fragment>
       <ToastContainer />
-      <div className="container" id="container">
+      {/* <div className="container" id="container">
         <div className="row">
-          <div className="col-sm-6">
-            <h3 className="text-center">Signup</h3>
-            <form className="was-validated" onSubmit={onSubmit}>
-              <div className="form-group">
-                <label htmlFor="name">Name:</label>
-                <input
-                  type="text"
-                  ref={name}
-                  className="form-control"
-                  id="name"
-                  placeholder="Enter name"
-                  name="name"
-                  required
+          <div className="col-sm-6"> */}
+      <div
+        className={
+          darkTheme ? "bg-dark text-light h-90" : "bg-light text-dark h-90"
+        }
+      >
+        <div className="container w-95">
+          <div className="row h-90">
+            <div className="col-sm-6 code-container mx-auto">
+              <h3 className="text-center">Signup</h3>
+              <form className="was-validated" onSubmit={onSubmit}>
+                <InputComp
+                  name="Name"
+                  value={name}
+                  isRequired={true}
+                  handler={setName}
                 />
-                <div className="invalid-feedback">
-                  Please fill out this field.
-                </div>
-              </div>
-              <div className="form-group">
-                <label htmlFor="email">Email:</label>
-                <input
+                <InputComp
+                  name="Email"
+                  value={email}
+                  isRequired={true}
+                  handler={setEmail}
                   type="email"
-                  ref={email}
-                  className="form-control"
-                  id="email"
-                  placeholder="Enter email"
-                  name="email"
-                  required
+                  feedback="Please enter valid email."
                 />
-                <div className="invalid-feedback">
-                  Please enter valid email.
-                </div>
-              </div>
-              <div className="form-group">
-                <label htmlFor="pwd">Password:</label>
-                <input
+                <InputComp
+                  name="Password"
+                  value={password}
+                  isRequired={true}
+                  handler={setPassword}
                   type="password"
-                  ref={password}
-                  className="form-control"
-                  id="pwd"
-                  placeholder="Enter password"
-                  name="pswd"
-                  required
+                  feedback="Your password must contain atleast 6 characters."
                 />
-                <div className="invalid-feedback">
-                  Your password must contain atleast 6 characters.
-                </div>
+                {isLoading ? (
+                  <p>We are verifying...</p>
+                ) : (
+                  <div className="text-center">
+                    <button type="submit" className="btn btn-primary">
+                      Submit
+                    </button>
+                  </div>
+                )}
+              </form>
+              <div className="text-center mt-5">
+                Already have an account? then <Link to="/login">Login</Link>
               </div>
-              {isLoading ? (
-                <p>We are verifying...</p>
-              ) : (
-                <div className="text-center">
-                  <button type="submit" className="btn btn-primary">
-                    Submit
-                  </button>
-                </div>
-              )}
-            </form>
-            <div className="text-center mt-5">
-              Already have an account? then <Link to="/login">Login</Link>
             </div>
           </div>
         </div>

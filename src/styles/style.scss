@@ -80,6 +80,16 @@ code {
     background-color: $black;
     color: $purewhite;
   }
+  .form-control {
+    background-color: $black;
+    color: $white;
+    &:focus {
+      background-color: $black;
+    }
+  }
+  input:-internal-autofill-selected {
+    background-color: $black !important;
+  }
 }
 
 .text-light {
