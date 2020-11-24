@@ -1,18 +1,20 @@
 import React from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Admin from "./components/adminpage/Admin";
-import { ThemeProvider } from "./components/context/ThemeContext";
-import Error404 from "./components/Error404";
-import HomePage from "./components/mainpage/HomePage";
-import Navbar from "./Navbar";
 import "./styles/style.css";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { ThemeProvider } from "./components/context/ThemeContext";
 import { CodeProivder } from "./components/context/CodeContext";
 import Login from "./components/adminpage/Login";
 import Signup from "./components/adminpage/Signup";
-import CodePage from "./components/CodePage";
+import Admin from "./components/adminpage/Admin";
 import Categories from "./components/adminpage/Categories";
 import EditPage from "./components/adminpage/EditPage";
 import Converter from "./components/adminpage/Converter";
+
+import HomePage from "./components/mainpage/HomePage";
+import Navbar from "./Navbar";
+import CodePage from "./components/CodePage";
+import Error404 from "./components/Error404";
 
 const App = () => {
   return (
