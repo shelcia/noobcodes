@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { NavLink } from "react-router-dom";
 import { ThemeContext } from "./components/context/ThemeContext";
 
 const Navbar = () => {
@@ -12,9 +13,9 @@ const Navbar = () => {
       }
       style={{ height: "10vh" }}
     >
-      <a className="navbar-brand" href="/">
+      <NavLink className="navbar-brand" to="/">
         Noob Codes
-      </a>
+      </NavLink>
       <form className="ml-auto mr-4">
         <div className="custom-control custom-switch">
           <input

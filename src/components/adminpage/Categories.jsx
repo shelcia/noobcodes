@@ -16,19 +16,22 @@ const Categories = ({ match }) => {
       >
         <div className="container w-95">
           <div className="row h-90">
-            <ul className="mt-5 w-100" style={{ listStyle: "none" }}>
+            <ul
+              className="mt-5 w-100 list-group list-group-flush"
+              style={{ listStyle: "none" }}
+            >
               {codeReq.map((code) => (
                 <li
                   key={code.codeId}
                   className={
                     darkTheme
-                      ? "p-3 background-dark shadow rounded-lg mt-2"
-                      : "p-3 bg-light shadow-sm rounded-lg mt-2"
+                      ? "list-group-item mt-2 bg-dark p-0 borderless shadow"
+                      : "list-group-item mt-2 bg-light p-0 borderless shadow-sm"
                   }
                 >
                   <NavLink
                     to={`code/${code.codeId}`}
-                    className="pl-4 sidenav-links"
+                    className="nav-link pl-5 sidenav-links"
                   >
                     {code.title}
                   </NavLink>

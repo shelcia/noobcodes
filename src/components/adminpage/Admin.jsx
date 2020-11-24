@@ -29,13 +29,13 @@ const Admin = () => {
       >
         <div className="container w-95">
           <div className="row h-90">
-            <div className="card-columns mt-5">
+            <div className="card-columns w-100 mt-5">
               {categories.map((category) => (
                 <div
                   className={
                     darkTheme
-                      ? "background-dark card shadow borderless"
-                      : "bg-light card shadow-sm borderless"
+                      ? "background-dark card shadow borderless py-3"
+                      : "bg-light card shadow-sm borderless py-3"
                   }
                   key={category.category}
                 >
@@ -46,7 +46,9 @@ const Admin = () => {
                 </div>
               ))}
             </div>
-            <NavLink to="converter">Converter</NavLink>
+            <NavLink to="converter" target={"_blank"}>
+              <button className="btn btn-primary">Converter</button>
+            </NavLink>
           </div>
         </div>
       </div>
