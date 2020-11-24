@@ -12,6 +12,7 @@ import Signup from "./components/adminpage/Signup";
 import CodePage from "./components/CodePage";
 import Categories from "./components/adminpage/Categories";
 import EditPage from "./components/adminpage/EditPage";
+import Converter from "./components/adminpage/Converter";
 
 const App = () => {
   return (
@@ -47,6 +48,11 @@ const App = () => {
                 path="/admin/rombakushithaan/signup"
                 exact
                 component={Signup}
+              />
+              <Route
+                path="/admin/rombakushithaan/converter"
+                exact
+                component={Converter}
               />
               <Route component={Error404} />
             </Switch>

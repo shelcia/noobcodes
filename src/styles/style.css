@@ -168,4 +168,9 @@ code {
 .borderless {
   border: none !important;
 }
+
+.btn {
+  padding: 0.65rem 1.5rem;
+  font-size: larger;
+}
 /*# sourceMappingURL=style.css.map */
