@@ -46,6 +46,7 @@ const Admin = () => {
                 </div>
               ))}
             </div>
+            <NavLink to="converter">Converter</NavLink>
           </div>
         </div>
       </div>

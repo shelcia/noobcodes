@@ -1,4 +1,14 @@
-* {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label,
+a,
+input,
+button {
   font-family: "Poppins", sans-serif;
 }
 
@@ -172,5 +182,18 @@ code {
 .btn {
   padding: 0.65rem 1.5rem;
   font-size: larger;
+}
+
+.scroll-y {
+  overflow-y: scroll;
+}
+
+#ace-editor,
+.ace_content,
+.ace_scroller,
+.ace_gutter,
+.ace_text-input,
+.ace_scrollbar .ace_scrollbar-v {
+  font-family: "Menlo", monospace !important;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,37 +1,55 @@
 import React, { useContext, useState } from "react";
 import { ThemeContext } from "../context/ThemeContext";
+import AceEditor from "react-ace";
+import { CopyBlock, dracula, github } from "react-code-blocks";
+
+import "ace-builds/src-noconflict/mode-python";
+import "ace-builds/src-noconflict/theme-github";
+import "ace-builds/src-noconflict/theme-monokai";
 
 const Converter = () => {
   const [darkTheme] = useContext(ThemeContext);
   const [code, setCode] = useState("");
+  const [text, setText] = useState("");
 
   const converterProgram = (event) => {
     event.preventDefault();
-    setCode(code.trimRight().replace(/\n/g, "\\n").replace(/"/g, "'"));
+    setCode(text.trimRight().replace(/\n/g, "\\n").replace(/"/g, "'"));
     console.log(code);
   };
+  function onChange(newValue) {
+    setText(newValue);
+  }
 
   return (
     <div
       className={
-        darkTheme ? "bg-dark text-light h-90" : "bg-light text-dark h-90"
+        darkTheme
+          ? "bg-dark text-light h-90 scroll-y"
+          : "bg-light text-dark h-90 scroll-y"
       }
-      style={{ overflowY: "scroll" }}
     >
       <div className="container w-95">
-        <div className="my-3">
-          <textarea
-            style={{ fontSize: "0.8rem", fontFamily: "'Menlo', sans-serif" }}
-            id="codearea"
-            className={
-              darkTheme ? "form-control background-dark" : "form-control"
-            }
-            value={code}
-            onChange={(event) => setCode(event.target.value)}
-            cols="120"
-            rows="25"
-          ></textarea>
-          <div className="text-center mt-4">
+        <div className="my-3 mb-5">
+          <h4>Python Editor</h4>
+          <hr />
+          <AceEditor
+            className="w-100 mx-auto"
+            style={{ fontFamily: "'Menlo', monospace" }}
+            mode="python"
+            theme={darkTheme ? "monokai" : "github"}
+            fontSize={16}
+            onChange={onChange}
+            showPrintMargin={true}
+            showGutter={true}
+            highlightActiveLine={true}
+            editorProps={{ $blockScrolling: true }}
+            setOptions={{
+              showLineNumbers: true,
+              tabSize: 4,
+            }}
+          />
+          <div className="text-center my-4">
             <button
               className="btn btn-primary"
               onClick={(event) => converterProgram(event)}
@@ -39,6 +57,17 @@ const Converter = () => {
               Convert
             </button>
           </div>
+          <h4>One Line Output</h4>
+          <hr />
+          <CopyBlock
+            className="shadow"
+            language={`python`}
+            text={code}
+            showLineNumbers={true}
+            theme={darkTheme ? dracula : github}
+            wrapLines={true}
+            codeBlock
+          />
         </div>
       </div>
     </div>
