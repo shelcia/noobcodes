@@ -33,10 +33,10 @@ const Login = () => {
         password: password,
       })
       .then((res) => {
-        console.log(res);
+        console.log(res.data);
         setIsLoading(false);
-        localStorage.setItem(`${PREFIX}Token`, res.data.message.token);
-        localStorage.setItem(`${PREFIX}name`, res.data.message.name);
+        localStorage.setItem(`${PREFIX}Token`, res.data.message);
+        // localStorage.setItem(`${PREFIX}name`, res.data.message.name);
         sucessNotify("Login succesfulll");
         history.push("/admin/rombakushithaan/dashboard");
       })

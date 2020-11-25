@@ -22,7 +22,8 @@ const HomePage = () => {
               <p>
                 No great stuff yet !!. It's hard to learn DS and Algos. So i
                 thought i will create a website which i love to do and also
-                learning DS and algo coz this is gonne be ds and algo website
+                learning DS and algo coz this is gonne be ds and algo website.
+                The questions are picked from geek for geeks
               </p>
             </div>
           </div>

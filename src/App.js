@@ -15,6 +15,7 @@ import HomePage from "./components/mainpage/HomePage";
 import Navbar from "./Navbar";
 import CodePage from "./components/CodePage";
 import Error404 from "./components/Error404";
+import AddPage from "./components/adminpage/AddPage";
 
 const App = () => {
   return (
@@ -55,6 +56,11 @@ const App = () => {
                 path="/admin/rombakushithaan/converter"
                 exact
                 component={Converter}
+              />
+              <Route
+                path="/admin/rombakushithaan/dashboard/addpage/:id"
+                exact
+                component={AddPage}
               />
               <Route component={Error404} />
             </Switch>
