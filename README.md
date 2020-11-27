@@ -1,5 +1,8 @@
 # Simplified Data structures and Algorithm solutions for Beginners in Python
 
+## Deployment
+
+https://noob-codes.netlify.app
 
 
 ### To Use this repo for development 
