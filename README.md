@@ -1,4 +1,4 @@
-# Simplified Data structures and Algorithm solutions for Beginners
+# Simplified Data structures and Algorithm solutions for Beginners in Python
 
 
 
