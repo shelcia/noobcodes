@@ -38,7 +38,7 @@ const Login = () => {
         localStorage.setItem(`${PREFIX}Token`, res.data.message);
         // localStorage.setItem(`${PREFIX}name`, res.data.message.name);
         sucessNotify("Login succesfulll");
-        history.push("/admin/rombakushithaan/dashboard");
+        history.push("/admin/dashboard");
       })
       .catch((error) => {
         console.log(error);

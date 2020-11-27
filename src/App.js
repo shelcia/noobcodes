@@ -27,38 +27,18 @@ const App = () => {
             <Switch>
               <Route path="/" exact component={HomePage} />
               <Route path="/code/:id" exact component={CodePage} />
+              <Route path="/admin/dashboard" exact component={Admin} />
               <Route
-                path="/admin/rombakushithaan/dashboard"
-                exact
-                component={Admin}
-              />
-              <Route
-                path="/admin/rombakushithaan/dashboard/code/:id"
+                path="/admin/dashboard/code/:id"
                 exact
                 component={EditPage}
               />
+              <Route path="/admin/dashboard/:id" exact component={Categories} />
+              <Route path="/admin/login" exact component={Login} />
+              <Route path="/admin/signup" exact component={Signup} />
+              <Route path="/admin/converter" exact component={Converter} />
               <Route
-                path="/admin/rombakushithaan/dashboard/:id"
-                exact
-                component={Categories}
-              />
-              <Route
-                path="/admin/rombakushithaan/login"
-                exact
-                component={Login}
-              />
-              <Route
-                path="/admin/rombakushithaan/signup"
-                exact
-                component={Signup}
-              />
-              <Route
-                path="/admin/rombakushithaan/converter"
-                exact
-                component={Converter}
-              />
-              <Route
-                path="/admin/rombakushithaan/dashboard/addpage/:id"
+                path="/admin/dashboard/addpage/:id"
                 exact
                 component={AddPage}
               />

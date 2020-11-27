@@ -5,10 +5,10 @@ import { ThemeContext } from "../context/ThemeContext";
 const Admin = () => {
   const [darkTheme] = useContext(ThemeContext);
   const [categories] = useState([
-    { category: "Array", url: "/admin/rombakushithaan/dashboard/array" },
+    { category: "Array", url: "/admin/dashboard/array" },
     {
       category: "Linked Lists",
-      url: "/admin/rombakushithaan/dashboard/linkedlist",
+      url: "/admin/dashboard/linkedlist",
     },
   ]);
 
