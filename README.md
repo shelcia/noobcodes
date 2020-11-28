@@ -2,7 +2,7 @@
 
 ## Deployment
 
-https://noob-codes.netlify.app
+https://noobcodes.netlify.app/
 
 
 ### To Use this repo for development 
