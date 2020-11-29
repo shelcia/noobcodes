@@ -2,7 +2,9 @@
 
 ## Deployment
 
-https://noobcodes.netlify.app/
+[![Deployed at Netlify](https://www.netlify.com/img/deploy/button.svg)](https://noobcodes.netlify.app/)
+
+
 
 
 ### To Use this repo for development 
