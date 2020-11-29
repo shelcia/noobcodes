@@ -1,14 +1,10 @@
 # Simplified Data structures and Algorithm solutions for Beginners in Python
 
-## Deployment
+### Deployment
 
 [![Deployed at Netlify](https://www.netlify.com/img/deploy/button.svg)](https://noobcodes.netlify.app/)
 
-
-
-
-### To Use this repo for development 
-
+### To Use this repo for development
 
 - Clone this repo
 

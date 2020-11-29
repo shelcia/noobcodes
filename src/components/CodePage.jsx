@@ -6,7 +6,6 @@ import SideNav from "./SideNav";
 import LoaderComp from "./Loading";
 
 const CodePage = ({ match }) => {
-  console.log(match.params.id);
   const [code] = useContext(CodeContext);
   const [darkTheme] = useContext(ThemeContext);
   const [isLoading, setIsLoading] = useState(false);
@@ -19,11 +18,11 @@ const CodePage = ({ match }) => {
     }
   }, [code.length]);
 
-  //   console.log(code);
-
   const codeReq = code.filter((code) => code.codeId === match.params.id);
 
-  //   console.log(codeReq);
+  if (codeReq.length > 0) {
+    console.log(codeReq[0].output);
+  }
 
   return isLoading ? (
     <LoaderComp />
@@ -52,6 +51,25 @@ const CodePage = ({ match }) => {
                   wrapLines={true}
                   codeBlock
                 />
+
+                {code.output && (
+                  <div className="my-5">
+                    <h2 className={darkTheme ? "text-light" : "text-dark"}>
+                      Output
+                    </h2>
+                    <hr />
+                    <div className="container-fluid">
+                      <CopyBlock
+                        language={`python`}
+                        text={code.output}
+                        showLineNumbers={true}
+                        theme={darkTheme ? dracula : github}
+                        wrapLines={true}
+                        codeBlock
+                      />
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           </div>

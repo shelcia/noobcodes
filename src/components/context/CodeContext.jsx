@@ -11,7 +11,7 @@ export const CodeProivder = ({ children }) => {
     axios
       .get(`${LINK}code`)
       .then((response) => {
-        console.log("Loaded");
+        // console.log("Loaded");
         if (response.data.status === "200") setCodes(response.data.message);
       })
       .catch((error) => {
