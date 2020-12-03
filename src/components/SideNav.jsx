@@ -11,6 +11,7 @@ const SideNav = () => {
 
   const arrayCodes = code.filter((code) => code.category === "array");
   const llCodes = code.filter((code) => code.category === "linkedlist");
+  const binarytrees = code.filter((code) => code.category === "binarytree");
 
   return (
     <React.Fragment>
@@ -35,6 +36,7 @@ const SideNav = () => {
         </div>
         <SideNavComp title="Arrays" codes={arrayCodes} />
         <SideNavComp title="Linked Lists" codes={llCodes} />
+        <SideNavComp title="Binary Trees" codes={binarytrees} />
       </div>
     </React.Fragment>
   );
