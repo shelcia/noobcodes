@@ -10,6 +10,10 @@ const Admin = () => {
       category: "Linked Lists",
       url: "/admin/dashboard/linkedlist",
     },
+    {
+      category: "Binary Tree",
+      url: "/admin/dashboard/binarytree",
+    },
   ]);
 
   const history = useHistory();
