@@ -1,14 +1,17 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 import { ThemeContext } from "../context/ThemeContext";
-import InputComp from "./InputComp";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
+import { useHistory } from "react-router-dom";
+import AceEditor from "react-ace";
 
 const AddPage = ({ match }) => {
-  const [title, setTitle] = useState("");
+  const title = useRef("");
   const [code, setCode] = useState("");
-  const [output, setOutput] = useState("");
+  const output = useRef("");
+
+  const history = useHistory();
 
   const [darkTheme] = useContext(ThemeContext);
   const successNotify = (message) => {
@@ -19,6 +22,10 @@ const AddPage = ({ match }) => {
     toast.error(message);
   };
 
+  function onChange(newValue) {
+    setCode(newValue);
+  }
+
   const add = async (e) => {
     e.preventDefault();
     // setIsLoading(true);
@@ -28,10 +35,10 @@ const AddPage = ({ match }) => {
     const token = localStorage.getItem("NoobCode-Token");
 
     const response = {
-      title: title,
+      title: title.current.value,
       category: match.params.id,
       code: code,
-      output: output,
+      output: output.current.value,
     };
 
     console.log(response);
@@ -48,7 +55,10 @@ const AddPage = ({ match }) => {
       })
       .then((response) => {
         console.log(response);
-        successNotify("Article added succesfully !!");
+        if (response.data.status === "200")
+          successNotify("Article added succesfully !!");
+        else if (response.data.status === "400")
+          errorNotify(response.data.message);
       })
       .catch((error) => {
         console.log(error);
@@ -63,34 +73,56 @@ const AddPage = ({ match }) => {
     >
       <ToastContainer />
       <div className="container w-95">
-        <div className="row h-90 pt-5">
-          <div className="col-sm-6 mx-auto">
+        <div className="row h-90 pt-5 scroll-y">
+          <div className="col-sm-10 mx-auto">
             <form>
-              <InputComp
-                name="Title"
-                value={title}
-                isRequired={true}
-                handler={setTitle}
+              <label htmlFor={`Title`}>Title:</label>
+              <input
+                type="text"
+                ref={title}
+                className="form-control"
+                placeholder={`Enter Title`}
+                required
               />
-              <textarea
-                className="form-control mb-3"
-                rows="7"
-                value={code}
-                onChange={(event) => setCode(event.target.value)}
-                placeholder="Enter Code"
+              <label htmlFor={`Code`}>Code:</label>
+              <AceEditor
+                className="w-100 mx-auto mt-4"
+                style={{ fontFamily: "'Menlo', monospace" }}
+                mode="python"
+                theme={darkTheme ? "monokai" : "github"}
+                fontSize={16}
+                onChange={onChange}
+                showPrintMargin={true}
+                showGutter={true}
+                highlightActiveLine={true}
+                editorProps={{ $blockScrolling: true }}
+                setOptions={{
+                  showLineNumbers: true,
+                  tabSize: 4,
+                }}
               />
-              <InputComp
-                name="Output"
-                value={output}
-                isRequired={false}
-                handler={setOutput}
+              <label htmlFor={`Output`}>Output:</label>
+              <input
+                type="text"
+                ref={output}
+                className="form-control mt-4"
+                placeholder={`Enter Output`}
+                required
               />
-              <button
-                className="btn btn-primary"
-                onClick={(event) => add(event)}
-              >
-                Add
-              </button>
+              <div className="text-center my-5">
+                <button
+                  className="btn btn-primary"
+                  onClick={(event) => add(event)}
+                >
+                  Add
+                </button>
+                <button
+                  className="ml-4 btn btn-outline-primary"
+                  onClick={() => history.goBack()}
+                >
+                  Back
+                </button>
+              </div>
             </form>
           </div>
         </div>

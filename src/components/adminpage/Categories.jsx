@@ -30,7 +30,7 @@ const Categories = ({ match }) => {
             <hr />
 
             <ul
-              className="w-100 mt-2 list-group list-group-flush"
+              className="w-100 mt-2 mb-5 list-group list-group-flush"
               style={{ listStyle: "none" }}
             >
               {codeReq.map((code) => (
