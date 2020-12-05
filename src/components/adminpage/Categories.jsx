@@ -19,13 +19,21 @@ const Categories = ({ match }) => {
           <div className="h-90 scroll-y">
             <div className="mt-5 d-flex justify-content-between align-items-center">
               <h2>{match.params.id}</h2>
-              <button
-                className="btn btn-primary"
-                type="button"
-                onClick={() => history.push(`addPage/${match.params.id}`)}
-              >
-                Add Article
-              </button>
+              <div>
+                <button
+                  className="mr-4 btn btn-outline-primary"
+                  onClick={() => history.push(`/admin/dashboard`)}
+                >
+                  Go Back
+                </button>
+                <button
+                  className="btn btn-primary"
+                  type="button"
+                  onClick={() => history.push(`addPage/${match.params.id}`)}
+                >
+                  Add Article
+                </button>
+              </div>
             </div>
             <hr />
 

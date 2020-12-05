@@ -38,7 +38,7 @@ const AddPage = ({ match }) => {
       return;
     }
 
-    toast.warning("We are on our way to add your artcle in our backend");
+    toast.warning("We are on our way to add your article in our backend");
 
     const LINK = process.env.REACT_APP_ADMINDASH_API;
 

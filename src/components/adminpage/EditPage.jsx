@@ -28,7 +28,7 @@ const EditPage = ({ match }) => {
         setTitle(codeReq[0].title);
         setCode(codeReq[0].code);
         setCategory(codeReq[0].category);
-        if (codeReq.output) {
+        if (codeReq[0].output) {
           setOutput(codeReq[0].output);
         }
       }
@@ -49,7 +49,7 @@ const EditPage = ({ match }) => {
   const edit = async (e) => {
     e.preventDefault();
 
-    toast.warning("We are on our way to add your artcle in our backend");
+    toast.warning("We are on our way to edit your article in our backend");
 
     const LINK = process.env.REACT_APP_ADMINDASH_API;
 
@@ -70,7 +70,7 @@ const EditPage = ({ match }) => {
     };
 
     axios
-      .put(`${LINK}code${match.params.id}`, response, {
+      .put(`${LINK}code/${match.params.id}`, response, {
         headers: headers,
       })
       .then((response) => {
