@@ -40,6 +40,10 @@ const CodePage = ({ match }) => {
                 <SideNav />
               </div>
               <div className="col-sm-9 code-container">
+                <h2 className={darkTheme ? "text-light" : "text-dark"}>
+                  {code.title}
+                </h2>
+                <hr />
                 <h2 className={darkTheme ? "text-light" : "text-dark"}>Code</h2>
                 <hr />
                 <CopyBlock
@@ -53,10 +57,26 @@ const CodePage = ({ match }) => {
 
                 {code.output && (
                   <React.Fragment>
-                    <h2 className={darkTheme ? "text-light" : "text-dark"}>
-                      Output
-                    </h2>
-                    {code.output}
+                    <div className="my-5">
+                      <h2 className={darkTheme ? "text-light" : "text-dark"}>
+                        Output
+                      </h2>
+                      <hr></hr>
+                      <div
+                        className={
+                          darkTheme ? "bg-dark shadow" : "bg-white shadow-sm"
+                        }
+                      >
+                        <CopyBlock
+                          language={`python`}
+                          text={code.output}
+                          showLineNumbers={false}
+                          theme={darkTheme ? dracula : github}
+                          wrapLines={true}
+                          codeBlock
+                        />
+                      </div>
+                    </div>
                   </React.Fragment>
                 )}
               </div>
