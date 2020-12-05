@@ -22,13 +22,23 @@ const AddPage = ({ match }) => {
     toast.error(message);
   };
 
-  function onChange(newValue) {
+  const onChange = (newValue) => {
     setCode(newValue);
-  }
+  };
 
   const add = async (e) => {
     e.preventDefault();
-    // setIsLoading(true);
+
+    if (title.current.value === "") {
+      errorNotify("Please Fill out the Title");
+      return;
+    }
+    if (code === "") {
+      errorNotify("Please enter the code");
+      return;
+    }
+
+    toast.warning("We are on our way to add your artcle in our backend");
 
     const LINK = process.env.REACT_APP_ADMINDASH_API;
 
@@ -84,9 +94,11 @@ const AddPage = ({ match }) => {
                 placeholder={`Enter Title`}
                 required
               />
-              <label htmlFor={`Code`}>Code:</label>
+              <label htmlFor={`Code`} className="mt-4">
+                Code:
+              </label>
               <AceEditor
-                className="w-100 mx-auto mt-4"
+                className="w-100 mx-auto"
                 style={{ fontFamily: "'Menlo', monospace" }}
                 mode="python"
                 theme={darkTheme ? "monokai" : "github"}
@@ -101,11 +113,13 @@ const AddPage = ({ match }) => {
                   tabSize: 4,
                 }}
               />
-              <label htmlFor={`Output`}>Output:</label>
+              <label htmlFor={`Output`} className="mt-4">
+                Output:
+              </label>
               <input
                 type="text"
                 ref={output}
-                className="form-control mt-4"
+                className="form-control"
                 placeholder={`Enter Output`}
                 required
               />
