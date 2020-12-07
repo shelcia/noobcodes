@@ -116,13 +116,12 @@ const AddPage = ({ match }) => {
               <label htmlFor={`Output`} className="mt-4">
                 Output:
               </label>
-              <input
-                type="text"
-                ref={output}
+              <textarea
                 className="form-control"
+                ref={output}
                 placeholder={`Enter Output`}
-                required
-              />
+                rows="5"
+              ></textarea>
               <div className="text-center my-5">
                 <button
                   className="btn btn-primary"
