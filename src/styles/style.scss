@@ -25,15 +25,15 @@ ul li,
   text-indent: -1.3em;
 }
 
-.list-group .list-group-item.bg-light {
-  background: url("./bulltetdark.svg") no-repeat left center;
-  background-size: 15px 15px;
-}
+// .list-group .list-group-item.bg-light {
+//   background: url("./bulltetdark.svg") no-repeat left center;
+//   background-size: 15px 15px;
+// }
 
-.list-group .list-group-item.bg-dark {
-  background: url("./bullet.svg") no-repeat left center;
-  background-size: 15px 15px;
-}
+// .list-group .list-group-item.bg-dark {
+//   background: url("./bullet.svg") no-repeat left center;
+//   background-size: 15px 15px;
+// }
 
 body ::-webkit-scrollbar {
   height: 5px; /*for horizonatal scrollbar*/
