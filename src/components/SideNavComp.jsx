@@ -40,7 +40,7 @@ const SideNavComp = React.memo(({ category, title }) => {
                   exact
                   to={`/code/${code.codeId}`}
                 >
-                  {code.title}
+                  &#9492; {code.title}
                 </NavLink>
               </li>
             ))}
