@@ -18,13 +18,24 @@ const HomePage = () => {
               <SideNav />
             </div>
             <div className="col-sm-9 mt-4">
-              <h1>Hello People !</h1>
+              <h1>Hello Folks !</h1>
               <hr />
+              <p>No great stuff yet !!. (not anytime sooner)</p>
               <p>
-                No great stuff yet !!. It's hard to learn DS and Algos. So i
-                thought i will create a website which i love to do and also
-                learning DS and algo coz this is gonne be ds and algo website.
-                The questions are picked from geek for geeks
+                The website has got selective interview questions picked from
+                various sources.
+              </p>
+              <ul>
+                <li>GEEK FOR GEEKS</li>
+                <li>INTERVIEW BIT</li>
+                <li>LEET CODE</li>
+              </ul>
+              <p>All solutions are available in python 3.</p>
+              <p>
+                P.S no aim to create an interview-based website, learning Data
+                structures and algorithms is too boring and I got to do pass
+                interviews, but making it with the website is cool, so here we
+                go presenting you shit interview web.
               </p>
             </div>
           </div>

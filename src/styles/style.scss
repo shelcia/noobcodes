@@ -16,8 +16,23 @@ label,
 a,
 input,
 button,
+ul li,
 .Toastify {
-  font-family: "Poppins", sans-serif;
+  // font-family: "Poppins", sans-serif !important;
+  font-family: "Futura", sans-serif !important;
+}
+.list-group {
+  text-indent: -1.3em;
+}
+
+.list-group .list-group-item.bg-light {
+  background: url("./bulltetdark.svg") no-repeat left center;
+  background-size: 15px 15px;
+}
+
+.list-group .list-group-item.bg-dark {
+  background: url("./bullet.svg") no-repeat left center;
+  background-size: 15px 15px;
 }
 
 body ::-webkit-scrollbar {
