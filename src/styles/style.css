@@ -11,7 +11,7 @@ input,
 button,
 ul li,
 .Toastify {
-  font-family: "Futura", sans-serif !important;
+  font-family: "Futura", "Poppins", "Mulish", "Roboto", sans-serif !important;
 }
 
 .list-group {

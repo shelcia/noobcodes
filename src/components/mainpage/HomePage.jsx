@@ -33,9 +33,14 @@ const HomePage = () => {
               <p>All solutions are available in python 3.</p>
               <p>
                 P.S no aim to create an interview-based website, learning Data
-                structures and algorithms is too boring and I got to do pass
+                structures and algorithms is too boring and I got to pass
                 interviews, but making it with the website is cool, so here we
                 go presenting you shit interview web.
+              </p>
+              <p>Developed by Shelcia</p>
+              <p>
+                You can contribute if you want{"    "}
+                <a href="https://github.com/shelcia/noobcodes">Github Repo</a>
               </p>
             </div>
           </div>
