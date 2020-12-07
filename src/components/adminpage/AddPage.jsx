@@ -132,7 +132,9 @@ const AddPage = ({ match }) => {
                 </button>
                 <button
                   className="ml-4 btn btn-outline-primary"
-                  onClick={() => history.goBack()}
+                  onClick={() =>
+                    history.push(`/admin/dashboard/${match.params.id}`)
+                  }
                 >
                   Back
                 </button>
