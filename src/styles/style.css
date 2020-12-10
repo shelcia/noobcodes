@@ -1,23 +1,7 @@
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-label,
-a,
-input,
-button,
-ul li,
-.Toastify {
-  font-family: "Futura", "Poppins", "Mulish", "Roboto", sans-serif !important;
-}
-
-.list-group {
-  text-indent: -1.3em;
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 body ::-webkit-scrollbar {
   height: 5px;
   /*for horizonatal scrollbar*/
@@ -40,17 +24,70 @@ body ::-webkit-scrollbar-thumb:hover {
   background: #007bff;
 }
 
-code {
-  font-family: "Menlo", monospace !important;
+.h-90 {
+  height: 90vh !important;
+}
+
+.w-95 {
+  max-width: 95% !important;
+}
+
+.background-dark {
+  background-color: #343a40;
+}
+
+.borderless {
+  border: none !important;
+}
+
+.btn {
+  padding: 0.5rem 1.5rem;
+  font-size: larger;
+}
+
+.scroll-y {
+  overflow-y: scroll;
+}
+
+.list-group {
+  text-indent: -1.3em;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label,
+a,
+input,
+button,
+ul li,
+.Toastify {
+  font-family: "Fira Sans", "Poppins", "Mulish", "Roboto", sans-serif !important;
+}
+
+p {
+  font-style: italic;
+}
+
+#ace-editor,
+.ace_content,
+.ace_scroller,
+.ace_gutter,
+.ace_text-input,
+.ace_scrollbar .ace_scrollbar-v,
+.sc-gsTCUz,
+.irsCXf,
+code,
+code span {
+  font-family: "JetBrains Mono", "Menlo", monospace !important;
 }
 
 .bg-dark {
   background-color: #282c34 !important;
-}
-
-.bg-dark .sc-gsTCUz,
-.bg-dark .irsCXf {
-  font-family: "Menlo", monospace !important;
 }
 
 .bg-dark .react-syntax-highlighter-line-number {
@@ -58,12 +95,7 @@ code {
 }
 
 .bg-dark code {
-  font-family: "Menlo", monospace !important;
   color: rgba(255, 255, 255, 0.87);
-}
-
-.bg-dark code span {
-  font-family: "Menlo", monospace !important;
 }
 
 .bg-dark .border-right {
@@ -116,18 +148,8 @@ code {
   color: rgba(255, 255, 255, 0.87) !important;
 }
 
-.bg-light .sc-gsTCUz,
-.bg-light .irsCXf {
-  font-family: "Menlo", monospace !important;
-}
-
 .bg-light code {
-  font-family: "Menlo", monospace !important;
   color: #c46800;
-}
-
-.bg-light code span {
-  font-family: "Menlo", monospace !important;
 }
 
 .bg-light .react-syntax-highlighter-line-number {
@@ -163,43 +185,14 @@ code {
   height: 300px;
 }
 
-.code-container {
+.code-container,
+.sidenav-container {
   max-height: 87vh;
   overflow-y: scroll;
   margin-top: 3vh;
 }
 
-.h-90 {
-  height: 90vh !important;
-}
-
-.w-95 {
-  max-width: 95% !important;
-}
-
-.background-dark {
-  background-color: #343a40;
-}
-
-.borderless {
-  border: none !important;
-}
-
-.btn {
-  padding: 0.5rem 1.5rem;
-  font-size: larger;
-}
-
-.scroll-y {
-  overflow-y: scroll;
-}
-
-#ace-editor,
-.ace_content,
-.ace_scroller,
-.ace_gutter,
-.ace_text-input,
-.ace_scrollbar .ace_scrollbar-v {
-  font-family: "Menlo", monospace !important;
+.sidenav-container {
+  max-height: 84vh;
 }
 /*# sourceMappingURL=style.css.map */

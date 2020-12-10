@@ -14,7 +14,7 @@ const HomePage = () => {
       >
         <div className="container w-95">
           <div className="row h-90">
-            <div className="col-sm-3 code-container">
+            <div className="col-sm-3 sidenav-container">
               <SideNav />
             </div>
             <div className="col-sm-9 mt-4">

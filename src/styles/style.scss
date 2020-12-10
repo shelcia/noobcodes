@@ -1,9 +1,6 @@
-$white: rgba(255, 255, 255, 0.87);
-$purewhite: #fff;
-$bg: #282c34;
-$black: #343a40;
-$whiteBorder: rgba(255, 255, 255, 0.1);
-$whitehover: rgb(228, 228, 228);
+@import "./variables";
+@import "./scrollbar";
+@import "./helper";
 
 p,
 h1,
@@ -18,74 +15,40 @@ input,
 button,
 ul li,
 .Toastify {
-  // font-family: "Poppins", sans-serif !important;
-  font-family: "Futura", "Poppins", "Mulish", "Roboto", sans-serif !important;
-}
-.list-group {
-  text-indent: -1.3em;
+  font-family: $primaryFont !important;
 }
 
-// .list-group .list-group-item.bg-light {
-//   background: url("./bulltetdark.svg") no-repeat left center;
-//   background-size: 15px 15px;
-// }
-
-// .list-group .list-group-item.bg-dark {
-//   background: url("./bullet.svg") no-repeat left center;
-//   background-size: 15px 15px;
-// }
-
-body ::-webkit-scrollbar {
-  height: 5px; /*for horizonatal scrollbar*/
-  width: 5px;
+p {
+  font-style: italic;
 }
 
-/* Track */
-body ::-webkit-scrollbar-track {
-  background: #f1f1f100;
-}
-
-/* Handle */
-body ::-webkit-scrollbar-thumb {
-  background: #007bff;
-  border-radius: 2.5px;
-}
-
-/* Handle on hover */
-body ::-webkit-scrollbar-thumb:hover {
-  background: #007bff;
-}
-
-code {
-  font-family: "Menlo", monospace !important;
+#ace-editor,
+.ace_content,
+.ace_scroller,
+.ace_gutter,
+.ace_text-input,
+.ace_scrollbar .ace_scrollbar-v,
+.sc-gsTCUz,
+.irsCXf,
+code,
+code span {
+  font-family: $secondaryFont !important;
 }
 
 .bg-dark {
   background-color: $bg !important;
-  .sc-gsTCUz,
-  .irsCXf {
-    font-family: "Menlo", monospace !important;
-  }
-
   .react-syntax-highlighter-line-number {
     color: #0076c4;
   }
-
   code {
-    font-family: "Menlo", monospace !important;
     color: $white;
-    span {
-      font-family: "Menlo", monospace !important;
-    }
   }
-
   .border-right {
     border-right: 0.1px solid $whiteBorder !important;
   }
   hr {
     border-top: 1px solid $whiteBorder;
   }
-
   .sidenav-links {
     font-size: 1.1rem;
     color: $white !important;
@@ -100,7 +63,6 @@ code {
       color: $purewhite;
     }
   }
-
   .nav-pills .nav-link.active,
   .nav-pills .show > .nav-link {
     background-color: $black;
@@ -124,17 +86,8 @@ code {
 }
 
 .bg-light {
-  .sc-gsTCUz,
-  .irsCXf {
-    font-family: "Menlo", monospace !important;
-  }
   code {
-    font-family: "Menlo", monospace !important;
-    // color: $bg;
     color: #c46800;
-    span {
-      font-family: "Menlo", monospace !important;
-    }
   }
   .react-syntax-highlighter-line-number {
     color: $black;
@@ -165,38 +118,12 @@ code {
 .output-img {
   height: 300px;
 }
-.code-container {
+.code-container,
+.sidenav-container {
   max-height: 87vh;
   overflow-y: scroll;
   margin-top: 3vh;
 }
-.h-90 {
-  height: 90vh !important;
-}
-.w-95 {
-  max-width: 95% !important;
-}
-
-.background-dark {
-  background-color: $black;
-}
-.borderless {
-  border: none !important;
-}
-
-.btn {
-  padding: 0.5rem 1.5rem;
-  font-size: larger;
-}
-.scroll-y {
-  overflow-y: scroll;
-}
-
-#ace-editor,
-.ace_content,
-.ace_scroller,
-.ace_gutter,
-.ace_text-input,
-.ace_scrollbar .ace_scrollbar-v {
-  font-family: "Menlo", monospace !important;
+.sidenav-container {
+  max-height: 84vh;
 }

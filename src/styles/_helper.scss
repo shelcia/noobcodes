@@ -1,0 +1,27 @@
+@import "./variables";
+
+.h-90 {
+  height: 90vh !important;
+}
+.w-95 {
+  max-width: 95% !important;
+}
+
+.background-dark {
+  background-color: $black;
+}
+.borderless {
+  border: none !important;
+}
+
+.btn {
+  padding: 0.5rem 1.5rem;
+  font-size: larger;
+}
+.scroll-y {
+  overflow-y: scroll;
+}
+
+.list-group {
+  text-indent: -1.3em;
+}
