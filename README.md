@@ -1,3 +1,6 @@
+![noobcodes](https://socialify.git.ci/shelcia/noobcodes/image?description=1&font=Rokkitt&language=1&owner=1&pattern=Brick%20Wall&theme=Dark)
+
+
 # Simplified Data structures and Algorithm solutions for Beginners in Python
 
 ### Deployment
