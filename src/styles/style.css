@@ -25,7 +25,7 @@ body ::-webkit-scrollbar-thumb:hover {
 }
 
 .h-90 {
-  height: 90vh !important;
+  min-height: 90vh !important;
 }
 
 .w-95 {
