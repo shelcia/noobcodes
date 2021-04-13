@@ -1,7 +1,7 @@
 ![noobcodes](https://socialify.git.ci/shelcia/noobcodes/image?description=1&font=Rokkitt&language=1&owner=1&pattern=Brick%20Wall&theme=Dark)
 
 
-# Simplified Data structures and Algorithm solutions for Beginners in Python
+# Simplified Data structure and Algorithm solutions for Beginner in Python
 
 ### Deployment
 
@@ -11,7 +11,7 @@
 
 - Clone this repo
 
-- Add .env file and create a variable name REACT_APP_ADMINAUTH_API and REACT_APP_ADMINDASH_API (which are essntially the backend url endpoints)
+- Add .env file and create a variable name REACT_APP_ADMINAUTH_API and REACT_APP_ADMINDASH_API (which are essentially the backend url endpoints)
 
 - Then run <code>npm install</code>
 
