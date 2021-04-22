@@ -9,7 +9,7 @@
     "ace-builds": "^1.4.12",
     "axios": "^0.21.0",
     "react": "^17.0.1",
-    "react-ace": "^9.2.0",
+    "react-ace": "^9.4.0",
     "react-code-blocks": "0.0.8",
     "react-dom": "^17.0.1",
     "react-loader-spinner": "^3.1.14",
